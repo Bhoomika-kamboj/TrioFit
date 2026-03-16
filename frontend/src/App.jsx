@@ -1,0 +1,60 @@
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+
+
+// Components
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
+// Pages
+import Home from "./pages/Home";
+import Frequentlyaskedques from "./pages/Frequentlyaskedques";
+import CareerOpportunities from "./pages/CarrerOppornuties";
+import PrivacyAndPolicy from "./pages/PrivacyAndPolicy";
+import ReturnAndExchange from "./pages/ReturnAndExchange";
+import ReturnPolicy from "./pages/ReturnPolicy";
+import SupportTeam from "./pages/SupportTeam";
+import TermsAndCondition from "./pages/TermsAndCondition";
+import AboutUs from "./pages/AboutUs";
+import Stores from "./pages/OurStore";
+import SeeMore from "./pages/SeeMore";
+import Women from "./pages/Women";
+import Men from "./pages/Men";
+import Kids from "./pages/Kids";
+import Checkout from "./pages/Checkout";
+import OrderSuccess from "./pages/OrderSuccess";
+
+
+
+
+function App() {
+  return (
+    <>
+      <Header />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/faq" element={<Frequentlyaskedques />} />
+        <Route path="/careers" element={<CareerOpportunities />} />
+        <Route path="/privacy" element={<PrivacyAndPolicy />} />
+        <Route path="/returns" element={<ReturnAndExchange />} />
+        <Route path="/return-policy" element={<ReturnPolicy />} />
+        <Route path="/support" element={<SupportTeam />} />
+        <Route path="/terms" element={<TermsAndCondition />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/stores" element={<Stores />} />
+        <Route path="/Women" element={<Women />} />
+        <Route path="/Men" element={<Men />} />
+        <Route path="/Kids" element={<Kids />} />
+      <Route path="/see-more/:id" element={<SeeMore />} />
+      <Route path="/checkout" element={<Checkout />} />
+      <Route path="/OrderSuccess" element={<OrderSuccess />} />
+      
+      </Routes>
+
+      <Footer />
+    </>
+  );
+}
+
+export default App;
