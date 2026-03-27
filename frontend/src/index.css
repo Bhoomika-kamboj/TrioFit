@@ -50,6 +50,16 @@ body {
 
   --card-shadow: rgba(0, 0, 0, 0.08);
   --header-shadow: rgba(0, 0, 0, 0.06);
+    --glass-bg: rgba(9, 26, 34, 0.562);
+  --glass-border: rgba(8, 1, 1, 0.45);
+  --glass-shadow: rgba(0, 0, 0, 0.18);
+ --footer-text-hover: #f6f6f7;
+ 
+  --glass-bg: rgba(91, 131, 142, 0.479);
+  --glass-bg2: rgba(56, 82, 106, 0.282);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-shadow: rgba(0, 0, 0, 0.1);
+  --glass-shine: rgba(255, 255, 255, 0.6);
 }
 
 /* 🌙 Dark Theme */
@@ -67,6 +77,16 @@ body {
 
   --card-shadow: rgba(255, 255, 255, 0.08);
   --header-shadow: rgba(255, 255, 255, 0.05);
+    --glass-bg: rgba(255, 255, 255, 0.3);
+  --glass-border: rgba(255, 255, 255, 0.375);
+  --glass-shadow: rgba(0, 0, 0, 0.55);
+  --footer-text-hover:#1b7aff;
+ --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-bg2: rgba(255, 255, 255, 0.468);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --glass-shadow: rgba(0, 0, 0, 0.4);
+  --glass-shine: rgba(255, 255, 255, 0.3);
+
 }
 
 
@@ -132,7 +152,7 @@ body {
 
 .header nav a:hover {
   transform: scale(1.1);
-  color: var(--sky);
+  color: var(--footer-text-hover);
 }
 
 .logout-btn {
@@ -355,7 +375,7 @@ main {
 
 .footer-column ul li a:hover {
   opacity: 1;
-  color: var(--sky);
+  color: var(--footer-text-hover);
   transform: translateX(5px);
   text-decoration: underline;
 }
@@ -690,28 +710,83 @@ main {
 /* ===============================
    PRODUCT CARD
 ================================ */
+/* ========================================
+   PERFECT GLASSMORPHISM PRODUCT CARD
+   Works in BOTH light & dark themes
+======================================== */
+
+
+
 .product-card {
-  background: var(--panel-bg);
-  color: black;
-  padding: 1rem;
+  /* True Glass Background - Matches Freepik reference */
+  background: linear-gradient(145deg, 
+    var(--glass-bg), 
+    var(--glass-bg2) 60%,
+    transparent
+  );
+  
+  /* CRUCIAL for glass effect */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  
+  /* Subtle glass border */
+  border: 1px solid var(--glass-border);
   border-radius: 20px;
-  text-align: center;
-  box-shadow: 0 10px 20px var(--card-shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
- 
+  padding: 20px;
+  
+  /* Multi-layered shadows + shine */
+  box-shadow: 
+    0 8px 32px var(--glass-shadow),
+    0 4px 12px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 var(--glass-shine),      /* Top shine */
+    inset -4px -4px 8px rgba(255, 255, 255, 0.1); /* Bevel */
+    
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.product-card h3{
-  color: var(--text-muted);
+
+.product-card::before {
+  /* Shine highlight like Freepik glass */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    var(--glass-shine), 
+    transparent
+  );
+  opacity: 0.8;
 }
 
 .product-card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 15px 30px var(--card-shadow);
+  backdrop-filter: blur(30px);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 20px 40px var(--glass-shadow),
+    0 8px 24px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 var(--glass-shine),
+    inset -6px -6px 12px rgba(255, 255, 255, 0.15);
 }
 
 .product-card img {
   width: 100%;
-  border-radius: 15px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.product-card h3 {
+  color: var(--text);
+  margin-bottom: 8px;
 }
 
 .product-card-actions {
@@ -720,6 +795,37 @@ main {
   gap: 0.6rem;
   flex-wrap: wrap;
 }
+
+
+
+.see-more-btn {
+  padding: 8px 16px;
+  background: linear-gradient(145deg, var(--glass-bg), var(--glass-bg2));
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
+  color: var(--text);
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.see-more-btn:hover {
+  backdrop-filter: blur(20px);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--glass-shadow);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .product-card button,
 .product-card-actions button,
@@ -2257,3 +2363,4 @@ button[type="submit"]:hover {
     font-size: 32px;
   }
 }
+
