@@ -922,7 +922,7 @@ export const kidGirlsEthnicProducts = [
   },
   {
     id: 85,
-    name: "Girls Ethnic 2",
+    name: " embroidered crop top and matching palazzo pants",
     price: 849,
     image: new URL("../assets/images/kid/kid/girls clothing/ethnic wear/2/2.1.jpeg", import.meta.url).href,
     variants: [
@@ -932,7 +932,7 @@ export const kidGirlsEthnicProducts = [
   },
   {
     id: 86,
-    name: "Girls Ethnic 3",
+    name: "bandhani printed with dhoti pants set",
     price: 899,
     image: new URL("../assets/images/kid/kid/girls clothing/ethnic wear/3/3.1.jpeg", import.meta.url).href,
     variants: [
@@ -942,7 +942,7 @@ export const kidGirlsEthnicProducts = [
   },
   {
     id: 87,
-    name: "Girls Ethnic 4",
+    name: "Anarkali suit set",
     price: 949,
     image: new URL("../assets/images/kid/kid/girls clothing/ethnic wear/4/4.1.jpeg", import.meta.url).href,
     variants: [
@@ -952,7 +952,7 @@ export const kidGirlsEthnicProducts = [
   },
   {
     id: 88,
-    name: "Girls Ethnic 5",
+    name: "Ethnic Kurta and Palazzo Set",
     price: 999,
     image: new URL("../assets/images/kid/kid/girls clothing/ethnic wear/5/5.1.jpeg", import.meta.url).href,
     variants: [
@@ -963,7 +963,7 @@ export const kidGirlsEthnicProducts = [
   },
   {
     id: 89,
-    name: "Girls Ethnic 6",
+    name: "Anarkali-style kurta",
     price: 1049,
     image: new URL("../assets/images/kid/kid/girls clothing/ethnic wear/6/6.1.jpeg", import.meta.url).href,
     variants: [
@@ -974,7 +974,7 @@ export const kidGirlsEthnicProducts = [
   },
   {
     id: 90,
-    name: "Girls Ethnic 7",
+    name: "floral embroidered kurta with a matching sharara set",
     price: 1099,
     image: new URL("../assets/images/kid/kid/girls clothing/ethnic wear/7/7.1.jpeg", import.meta.url).href,
     variants: [
@@ -984,7 +984,7 @@ export const kidGirlsEthnicProducts = [
   },
   {
     id: 91,
-    name: "Girls Ethnic 8",
+    name: "Bandhani printed kurti and sharara set",
     price: 1149,
     image: new URL("../assets/images/kid/kid/girls clothing/ethnic wear/8/8.1.jpeg", import.meta.url).href,
     variants: [
@@ -996,7 +996,7 @@ export const kidGirlsEthnicProducts = [
 export const kidGirlsTopProducts = [
   {
     id: 92,
-    name: "Girls Top 1",
+    name: "short-sleeve crop top",
     price: 499,
     image: new URL("../assets/images/kid/kid/girls clothing/tshirt and top/1/1.1.jpeg", import.meta.url).href,
     variants: [
@@ -1006,7 +1006,7 @@ export const kidGirlsTopProducts = [
   },
   {
     id: 93,
-    name: "Girls Top 2",
+    name: "long-sleeve crop top",
     price: 549,
     image: new URL("../assets/images/kid/kid/girls clothing/tshirt and top/2/2.1.jpeg", import.meta.url).href,
     variants: [
@@ -1016,7 +1016,7 @@ export const kidGirlsTopProducts = [
   },
   {
     id: 94,
-    name: "Girls Top 3",
+    name: "black long-sleeved crop top",
     price: 599,
     image: new URL("../assets/images/kid/kid/girls clothing/tshirt and top/3/3.1.jpeg", import.meta.url).href,
     variants: [
@@ -1026,7 +1026,7 @@ export const kidGirlsTopProducts = [
   },
   {
     id: 95,
-    name: "Girls Top 4",
+    name: "black graphic t-shirt ",
     price: 649,
     image: new URL("../assets/images/kid/kid/girls clothing/tshirt and top/4/4.1.jpeg", import.meta.url).href,
     variants: [
@@ -1036,7 +1036,7 @@ export const kidGirlsTopProducts = [
   },
   {
     id: 96,
-    name: "Girls Top 5",
+    name: "Girls Top 5floral printed sleeveless top",
     price: 699,
     image: new URL("../assets/images/kid/kid/girls clothing/tshirt and top/5/5.1.jpeg", import.meta.url).href,
     variants: [
@@ -1047,7 +1047,7 @@ export const kidGirlsTopProducts = [
   },
   {
     id: 97,
-    name: "Girls Top 6",
+    name: "red and black crop top",
     price: 749,
     image: new URL("../assets/images/kid/kid/girls clothing/tshirt and top/6/6.1.jpeg", import.meta.url).href,
     variants: [
@@ -1057,7 +1057,7 @@ export const kidGirlsTopProducts = [
   },
   {
     id: 98,
-    name: "Girls Top 7",
+    name: " Party Cotton Blend Crop Top",
     price: 799,
     image: new URL("../assets/images/kid/kid/girls clothing/tshirt and top/7/7.1.jpeg", import.meta.url).href,
     variants: [
