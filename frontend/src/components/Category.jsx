@@ -29,7 +29,10 @@ const Category = () => {
   };
 
   return (
+    <>
+    <h1 className="Title">Shop by Category</h1>
     <div className="category-container">
+     
       {categories.map((cat) => (
         <div
           key={cat.name}
@@ -41,6 +44,7 @@ const Category = () => {
         </div>
       ))}
     </div>
+    </>
   );
 };
 

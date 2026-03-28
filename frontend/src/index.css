@@ -69,11 +69,12 @@ body {
   --glass-shadow: rgba(0, 0, 0, 0.18);
  --footer-text-hover: #f6f6f7;
  
-  --glass-bg: rgba(91, 131, 142, 0.479);
-  --glass-bg2: rgba(56, 82, 106, 0.282);
-  --glass-border: rgba(255, 255, 255, 0.4);
-  --glass-shadow: rgba(0, 0, 0, 0.1);
-  --glass-shine: rgba(255, 255, 255, 0.6);
+   --glass-bg: rgba(200, 230, 255, 0.35);      /* soft blue translucent base */
+  --glass-bg2: rgba(180, 210, 245, 0.25);     /* slightly deeper blue for variant/bg layering */
+  --glass-border: rgba(255, 255, 255, 0.3);   /* subtle white border for glass edge */
+  --glass-shadow: rgba(0, 0, 0, 0.15);        /* soft shadow for depth */
+  --glass-shine: rgba(255, 255, 255, 0.2);    /* subtle reflective shine */
+  --glass-card: rgba(220, 245, 255, 0.45);    /* card background glass feel */
 }
 
 /* 🌙 Dark Theme */
@@ -112,6 +113,7 @@ body {
   --glass-border: rgba(255, 255, 255, 0.15);
   --glass-shadow: rgba(0, 0, 0, 0.4);
   --glass-shine: rgba(255, 255, 255, 0.3);
+  --glass-card: rgba(153, 150, 150, 0.322);
 }
 
 
@@ -341,7 +343,7 @@ main {
 ================================ */
 popular-slider-section {
   /* Glassmorphism Base */
-  background: var(--header-bg); /* Using the same variable from your header */
+  background: var(--glass-card); /* Using the same variable from your header */
   backdrop-filter: blur(15px) saturate(160%);
   -webkit-backdrop-filter: blur(15px) saturate(160%);
   
@@ -548,25 +550,27 @@ popular-slider-section {
 /* ===============================
    SEE MORE PAGE
 ================================ */
+/* SeeMore Page */
 .see-more-page {
   max-width: 900px;
   margin: 2rem auto;
   padding: 1.5rem;
-  background: var(--panel-bg);
-  border: 1px solid rgba(59, 130, 246, 0.15);
+  background: var(--glass-card);
+  border: 1px solid var(--glass-border);
   border-radius: 18px;
-  box-shadow: 0 10px 20px var(--card-shadow);
+  box-shadow: 0 10px 20px var(--glass-shadow);
+  min-height: calc(100vh - 140px);
+  color: var(--text-main);
 }
 
 .see-more-page h1 {
   margin-bottom: 0.5rem;
-  color: var(--text);
 }
 
 .see-more-page .price {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #2563eb;
+  color: var(--primary-soft);
 }
 
 .see-more-container {
@@ -575,6 +579,51 @@ popular-slider-section {
   grid-template-columns: 1fr 260px;
   gap: 1.5rem;
   align-items: flex-start;
+}
+
+.main-image {
+  border-radius: 15px;
+  overflow: hidden;
+  background: var(--glass-bg);
+  box-shadow: 0 8px 20px var(--glass-shadow);
+  max-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-image img {
+  width: auto;
+  max-width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  display: block;
+}
+
+.variants-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-height: 520px;
+  overflow-y: auto;
+}
+
+.variant-img {
+  width: 100%;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  object-fit: contain;
+  transition: transform 0.2s ease, border 0.2s ease;
+}
+
+.variant-img:hover {
+  transform: scale(1.02);
+}
+
+.variant-img.active {
+  border-color: var(--primary);
+  box-shadow: 0 0 6px var(--primary-soft);
 }
 
 .selection-container,
@@ -590,7 +639,7 @@ popular-slider-section {
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
-  color: var(--text);
+  color: var(--text-main);
   font-weight: 600;
 }
 
@@ -598,9 +647,9 @@ popular-slider-section {
 .selection-container input {
   width: 220px;
   padding: 0.6rem 0.8rem;
-  border: 1px solid #94a3b8;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
-  background: var(--bg);
+  background: var(--glass-bg2);
   color: var(--text-main);
   outline: none;
   transition: box-shadow 0.2s ease, border 0.2s ease;
@@ -608,106 +657,24 @@ popular-slider-section {
 
 .selection-container select:focus,
 .selection-container input:focus {
-  border-color: #1d4ed8;
+  border-color: var(--primary);
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.35);
-}
-
-.actions-container {
-  justify-content: flex-start;
 }
 
 .add-to-cart-btn,
 .order-now-btn {
   min-width: 170px;
-  text-align: center;
-}
-
-.review-container {
-  margin-top: 1.2rem;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(15, 23, 42, 0.1);
-}
-
-.main-image {
-  border-radius: 15px;
-  overflow: hidden;
-  background: var(--bg);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  max-height: 520px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.main-image img {
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  max-height: 520px;
-  object-fit: contain;
-  display: block;
-}
-
-.variants-column {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.6rem;
-  max-height: 520px;
-  overflow-y: auto;
-}
-.selection-container{
-  color: var(--text);
-}
-.variant-img {
-  width: 100%;
-  max-height: 180px;
-  border-radius: 10px;
-  object-fit: contain;
-  border: 2px solid transparent;
-  cursor: pointer;
-}
-
-.variant-img:hover {
-  transform: scale(1.02);
-  transition: transform 0.2s ease;
-}
-
-.variant-img.active {
-  border-color: #1d4ed8;
-  box-shadow: 0 0 0 2px rgba(30, 64, 175, 0.2);
-}
-
-.see-more-page {
-  min-height: calc(100vh - 140px);
-}
-
-.variants-column {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-
-.variant-img {
-  width: 100%;
-  border-radius: 12px;
-  border: 2px solid transparent;
-  cursor: pointer;
-}
-
-.variant-img.active {
-  border-color: #1d4ed8;
-}
-
-.add-to-cart-btn {
-  margin-top: 1rem;
   padding: 0.8rem 1rem;
   border: none;
   border-radius: 12px;
-  background: #1d4ed8;
-  color: white;
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-to-cart-btn {
+  background: var(--primary);
+  color: #fff;
 }
 
 .add-to-cart-btn:hover {
@@ -716,15 +683,8 @@ popular-slider-section {
 }
 
 .order-now-btn {
-  margin-top: 0.6rem;
-  padding: 0.7rem 1rem;
-  border: none;
-  border-radius: 12px;
   background: #059669;
   color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .order-now-btn:hover {
@@ -732,117 +692,71 @@ popular-slider-section {
   box-shadow: 0 6px 16px rgba(5, 150, 105, 0.35);
 }
 
-.review-form {
-  margin-top: 0.9rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+.review-container {
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .review-form textarea {
   width: 100%;
   min-height: 80px;
   resize: vertical;
-  border: 1px solid #94a3b8;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   padding: 0.75rem;
-  background: #fff;
-  color: #0f172a;
+  background: var(--glass-bg2);
+  color: var(--text-main);
 }
 
 .review-btn {
-  width: fit-content;
   padding: 0.6rem 1rem;
-  border: none;
   border-radius: 10px;
-  background: #2563eb;
+  background: var(--primary-soft);
   color: #fff;
+  border: none;
   font-weight: 600;
-  cursor: pointer;
-}
-
-.review-btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 12px rgba(37, 99, 235, 0.35);
-}
-
-.review-success {
-  color: #059669;
-  font-weight: 600;
-  margin-top: 0.6rem;
 }
 
 .comment-section {
   margin-top: 1.2rem;
   padding: 1rem;
-  background: rgba(56, 189, 248, 0.08);
-  border: 1px solid rgba(56, 189, 248, 0.2);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
   border-radius: 12px;
-  color: #3772fa;
-}
-
-.comment-section h3 {
-  margin-bottom: 0.7rem;
-  
+  color: var(--text-main);
 }
 
 .comment-list {
   list-style: none;
-  margin: 0;
   padding: 0;
   display: grid;
   gap: 0.8rem;
-  color: #000;
 }
-
 .comment-item {
   padding: 0.7rem;
   border-radius: 10px;
-  background: #fff;
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  color: #0f172a;
-}
-
-.comment-text {
-  margin: 0 0 0.4rem;
-  color: #000 !important;
-  font-weight: 600;
-}
-
-.comment-time {
-  color: #5597f5;
-  font-size: 0.78rem;
-}
-
-.no-comments {
-  color: #1b7aff;
+  background: var(--glass-bg2);
+  border: 1px solid var(--glass-border);
+  color: var(--text-main);
 }
 
 @media (max-width: 900px) {
   .see-more-container {
     grid-template-columns: 1fr;
   }
-
   .variants-column {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
   }
-
   .variant-img {
     width: calc(50% - 0.4rem);
   }
 }
-
 /* ===============================
    PRODUCT CARD
 ================================ */
-/* ========================================
-   PERFECT GLASSMORPHISM PRODUCT CARD
-   Works in BOTH light & dark themes
-======================================== */
-
-
 
 .product-card {
   /* True Glass Background - Matches Freepik reference */
@@ -1509,6 +1423,7 @@ padding: 1rem;
   gap: 2rem;
   flex-wrap: wrap;
   margin: 2rem 0;
+
 }
 
 .category-card {
@@ -1521,7 +1436,9 @@ padding: 1rem;
   flex: 1 1 220px;
   min-width: 220px;
   max-width: 320px;
-  background-color: var(--bg);
+  background-color: var(--glass-card);
+  margin: 2px auto;
+  border: 2px solid rgba(255, 255, 255, 0.74);
 }
 
 .category-card img {
