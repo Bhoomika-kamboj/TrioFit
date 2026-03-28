@@ -2,7 +2,7 @@
 export const topProducts = [
     {
         id: 1,
-        name: "Women Top 1",
+        name: "Solid Women Dark Blue Top",
         price: 1199,
         image: new URL("../assets/images/women/women/Topwear/1.0/top1.0.jpg", import.meta.url).href,
         variants: [
@@ -13,7 +13,7 @@ export const topProducts = [
     },
     {
         id: 2,
-        name: "Women Top 2",
+        name: "Women Striped Formal Pink Shirt",
         price: 1299,
         image: new URL("../assets/images/women/women/Topwear/2.0/top2.0.jpg", import.meta.url).href,
         variants: [
@@ -24,7 +24,7 @@ export const topProducts = [
     },
     {
         id: 3,
-        name: "Women Top 3",
+        name: "Solid Casual Black Shirt",
         price: 1399,
         image: new URL("../assets/images/women/women/Topwear/3.0/top3.0.jpg", import.meta.url).href,
         variants: [
@@ -35,7 +35,7 @@ export const topProducts = [
     },
     {
         id: 4,
-        name: "Women Top 4",
+        name: "Pure Cotton Black Tshirt",
         price: 1499,
         image: new URL("../assets/images/women/women/Topwear/4.0/top4.0.jpg", import.meta.url).href,
         variants: [
@@ -46,7 +46,7 @@ export const topProducts = [
     },
     {
         id: 5,
-        name: "Women Top 5",
+        name: "Solid Women Beige Top",
         price: 1599,
         image: new URL("../assets/images/women/women/Topwear/5.0/top5.0.jpg", import.meta.url).href,
         variants: [
@@ -57,7 +57,7 @@ export const topProducts = [
     },
     {
         id: 6,
-        name: "Women Top 6",
+        name: " Solid Women Dark Green Top",
         price: 1699,
         image: new URL("../assets/images/women/women/Topwear/6.0/top6.0.jpg", import.meta.url).href,
         variants: [
@@ -68,7 +68,7 @@ export const topProducts = [
     },
     {
         id: 7,
-        name: "Women Top 7",
+        name: " Sleeveless Solid Women Maroon Top",
         price: 1799,
         image: new URL("../assets/images/women/women/Topwear/7.0/top7.0.jpg", import.meta.url).href,
         variants: [
@@ -79,7 +79,7 @@ export const topProducts = [
     },
     {
         id: 8,
-        name: "Women Top 8",
+        name: " Solid Women Black Top",
         price: 1899,
         image: new URL("../assets/images/women/women/Topwear/8.0/top8.0.jpg", import.meta.url).href,
         variants: [
@@ -90,7 +90,7 @@ export const topProducts = [
     },
     {
         id: 9,
-        name: "Women Top 9",
+        name: " One Shoulder Solid Women White Top",
         price: 1999,
         image: new URL("../assets/images/women/women/Topwear/9.0/top9.0.jpg", import.meta.url).href,
         variants: [
@@ -101,7 +101,7 @@ export const topProducts = [
     },
     {
         id: 10,
-        name: "Women Top 10",
+        name: "Sleeveless Women Dark Blue Top",
         price: 2099,
         image: new URL("../assets/images/women/women/Topwear/10.0/top10.0.jpg", import.meta.url).href,
         variants: [
@@ -115,7 +115,7 @@ export const topProducts = [
 export const bottomProducts = [
     {
         id: 11,
-        name: "Women Bottom 1",
+        name: "Straight Fit High-Rise Stretchable Jeans",
         price: 999,
         image: new URL("../assets/images/women/women/bottomwear/1.0/bottom1.0.jpg", import.meta.url).href,
         variants: [
@@ -125,7 +125,7 @@ export const bottomProducts = [
     },
     {
         id: 12,
-        name: "Women Bottom 2",
+        name: "Straight Fit High Rise Black Jeans",
         price: 1099,
         image: new URL("../assets/images/women/women/bottomwear/2.0/bottom2.0.jpg", import.meta.url).href,
         variants: [
@@ -135,7 +135,7 @@ export const bottomProducts = [
     },
     {
         id: 13,
-        name: "Women Bottom 3",
+        name: "Women Flared High Rise Blue Jeans",
         price: 1199,
         image: new URL("../assets/images/women/women/bottomwear/3.0/bottom3.0.jpg", import.meta.url).href,
         variants: [
@@ -145,7 +145,7 @@ export const bottomProducts = [
     },
     {
         id: 14,
-        name: "Women Bottom 4",
+        name: "Women’S Cargo Flap Pocket Jeans",
         price: 1299,
         image: new URL("../assets/images/women/women/bottomwear/4.0/bottom4.0.jpg", import.meta.url).href,
         variants: [
@@ -155,7 +155,7 @@ export const bottomProducts = [
     },
     {
         id: 15,
-        name: "Women Bottom 5",
+        name: "Women Flared Grey Cotton Trousers",
         price: 1399,
         image: new URL("../assets/images/women/women/bottomwear/5.0/bottom5.0.jpg", import.meta.url).href,
         variants: [
@@ -165,7 +165,7 @@ export const bottomProducts = [
     },
     {
         id: 16,
-        name: "Women Bottom 6",
+        name: "Woman Pants Women's Formal",
         price: 1499,
         image: new URL("../assets/images/women/women/bottomwear/6.0/bottom6.0.jpg", import.meta.url).href,
         variants: [
@@ -175,7 +175,7 @@ export const bottomProducts = [
     },
     {
         id: 17,
-        name: "Women Bottom 7",
+        name: "Denim Pencil Midi Skirt",
         price: 1599,
         image: new URL("../assets/images/women/women/bottomwear/7.0/bottom7.0.jpg", import.meta.url).href,
         variants: [
@@ -185,7 +185,7 @@ export const bottomProducts = [
     },
     {
         id: 18,
-        name: "Women Bottom 8",
+        name: " Regular Fit Black Rayon Trousers",
         price: 1699,
         image: new URL("../assets/images/women/women/bottomwear/8.0/bottom8.0.jpg", import.meta.url).href,
         variants: [
@@ -195,7 +195,7 @@ export const bottomProducts = [
     },
     {
         id: 19,
-        name: "Women Bottom 9",
+        name: "Women's Beige Relaxed Viscose Rayon Trousers",
         price: 1799,
         image: new URL("../assets/images/women/women/bottomwear/9.0/bottom9.0.jpg", import.meta.url).href,
         variants: [
@@ -205,7 +205,7 @@ export const bottomProducts = [
     },
     {
         id: 20,
-        name: "Women Bottom 10",
+        name: "Tailored Mini Skort",
         price: 1899,
         image: new URL("../assets/images/women/women/bottomwear/10.0/bottom10.0.jpg", import.meta.url).href,
         variants: [
@@ -218,7 +218,7 @@ export const bottomProducts = [
 export const ethnicProducts = [
     {
         id: 21,
-        name: "Women Ethnic 1",
+        name: "blue floral print corset back kurti",
         price: 1299,
         image: new URL("../assets/images/women/women/Ethnic/1.0/ethnic1.0.jpg", import.meta.url).href,
         variants: [
@@ -229,7 +229,7 @@ export const ethnicProducts = [
     },
     {
         id: 22,
-        name: "Women Ethnic 2",
+        name: "green floral printed cotton empire top",
         price: 1399,
         image: new URL("../assets/images/women/women/Ethnic/2.0/ethnic2.0.jpg", import.meta.url).href,
         variants: [
@@ -240,7 +240,7 @@ export const ethnicProducts = [
     },
     {
         id: 23,
-        name: "Women Ethnic 3",
+        name: "women's ethnic motifs printed panelled kurta",
         price: 1499,
         image: new URL("../assets/images/women/women/Ethnic/3.0/ethnic3.0.jpg", import.meta.url).href,
         variants: [
@@ -251,7 +251,7 @@ export const ethnicProducts = [
     },
     {
         id: 24,
-        name: "Women Ethnic 4",
+        name: "Kurti Pant Dupatta Set",
         price: 1599,
         image: new URL("../assets/images/women/women/Ethnic/4.0/ethnic4.0.jpg", import.meta.url).href,
         variants: [
@@ -262,7 +262,7 @@ export const ethnicProducts = [
     },
     {
         id: 25,
-        name: "Women Ethnic 5",
+        name: "maroon printed Anarkali Kurta Palazzo Set ",
         price: 1699,
         image: new URL("../assets/images/women/women/Ethnic/5.0/ethnic5.0.jpg", import.meta.url).href,
         variants: [
@@ -273,7 +273,7 @@ export const ethnicProducts = [
     },
     {
         id: 26,
-        name: "Women Ethnic 6",
+        name: "green Rayon floral Anarkali long gown",
         price: 1799,
         image: new URL("../assets/images/women/women/Ethnic/6.0/ethnic6.0.jpg", import.meta.url).href,
         variants: [
@@ -284,7 +284,7 @@ export const ethnicProducts = [
     },
     {
         id: 27,
-        name: "Women Ethnic 7",
+        name: "Solid Semi Stitched Lehenga Choli",
         price: 1899,
         image: new URL("../assets/images/women/women/Ethnic/7.0/ethnic7.0.jpg", import.meta.url).href,
         variants: [
@@ -295,7 +295,7 @@ export const ethnicProducts = [
     },
     {
         id: 28,
-        name: "Women Ethnic 8",
+        name: "Embroidered Semi Stitched Lehenga Choli (Purple)",
         price: 1999,
         image: new URL("../assets/images/women/women/Ethnic/8.0/ethnic8.0.jpg", import.meta.url).href,
         variants: [
@@ -306,7 +306,7 @@ export const ethnicProducts = [
     },
     {
         id: 29,
-        name: "Women Ethnic 9",
+        name: "Royal Blue embroidered silk blend lehenga choli",
         price: 2099,
         image: new URL("../assets/images/women/women/Ethnic/9.0/ethnic9.0.jpg", import.meta.url).href,
         variants: [
@@ -317,7 +317,7 @@ export const ethnicProducts = [
     },
     {
         id: 30,
-        name: "Women Ethnic 10",
+        name: "grey embellished organza satin silk saree",
         price: 2199,
         image: new URL("../assets/images/women/women/Ethnic/10.0/ethnic10.0.jpg", import.meta.url).href,
         variants: [
@@ -331,7 +331,7 @@ export const ethnicProducts = [
 export const kidEthnicProducts = [
     {
         id: 31,
-        name: "Kids Ethnic 1",
+        name: "Cutiekins boys'printed kurta ",
         price: 799,
         image: new URL("../assets/images/kid/kid/boys'clothing/ethnic wear/1/1.1.jpeg", import.meta.url).href,
         variants: [
@@ -343,7 +343,7 @@ export const kidEthnicProducts = [
     },
     {
         id: 32,
-        name: "Kids Ethnic 2",
+        name: "VASTRAMAY Boys' Sherwani Set",
         price: 849,
         image: new URL("../assets/images/kid/kid/boys'clothing/ethnic wear/2/2.2.jpeg", import.meta.url).href,
         variants: [
@@ -353,7 +353,7 @@ export const kidEthnicProducts = [
     },
     {
         id: 33,
-        name: "Kids Ethnic 3",
+        name: "Baby Boys Festive & Party Kurta",
         price: 899,
         image: new URL("../assets/images/kid/kid/boys'clothing/ethnic wear/3/3.1.jpeg", import.meta.url).href,
         variants: [
@@ -364,7 +364,7 @@ export const kidEthnicProducts = [
     },
     {
         id: 34,
-        name: "Kids Ethnic 4",
+        name: "Boys Festive & Party Kurta ",
         price: 949,
         image: new URL("../assets/images/kid/kid/boys'clothing/ethnic wear/4/4.2.jpeg", import.meta.url).href,
         variants: [
@@ -375,7 +375,7 @@ export const kidEthnicProducts = [
     },
     {
         id: 35,
-        name: "Kids Ethnic 5",
+        name: "Boys Casual Kurta and Pyjama Set",
         price: 999,
         image: new URL("../assets/images/kid/kid/boys'clothing/ethnic wear/5/5.2.jpeg", import.meta.url).href,
         variants: [
@@ -386,7 +386,7 @@ export const kidEthnicProducts = [
     },
     {
         id: 36,
-        name: "Kids Ethnic 6",
+        name: "Cream Floral  Kurta with Churidar Pant",
         price: 1049,
         image: new URL("../assets/images/kid/kid/boys'clothing/ethnic wear/6/6.1.jpeg", import.meta.url).href,
         variants: [
@@ -397,7 +397,7 @@ export const kidEthnicProducts = [
     },
     {
         id: 37,
-        name: "Kids Ethnic 7",
+        name: "Boys Festive & Party Dhoti & Kurta Set ",
         price: 1099,
         image: new URL("../assets/images/kid/kid/boys'clothing/ethnic wear/7/7.1.jpeg", import.meta.url).href,
         variants: [
@@ -409,7 +409,7 @@ export const kidEthnicProducts = [
     },
     {
         id: 38,
-        name: "Kids Ethnic 8",
+        name: "Boys Casual Dhoti & Kurta Set",
         price: 1149,
         image: new URL("../assets/images/kid/kid/boys'clothing/ethnic wear/8/8.1.jpeg", import.meta.url).href,
         variants: [
@@ -419,7 +419,7 @@ export const kidEthnicProducts = [
     },
     {
         id: 39,
-        name: "Kids Ethnic 9",
+        name: "Boy Suit Kids Floral Assemetric Traditional Outfit",
         price: 1199,
         image: new URL("../assets/images/kid/kid/boys'clothing/ethnic wear/9/9.1.jpeg", import.meta.url).href,
         variants: [
@@ -431,7 +431,7 @@ export const kidEthnicProducts = [
     },
     {
         id: 40,
-        name: "Kids Ethnic 10",
+        name: "Boys Festive & Party Kurta and Pyjama Set ",
         price: 1249,
         image: new URL("../assets/images/kid/kid/boys'clothing/ethnic wear/10/10.1.jpeg", import.meta.url).href,
         variants: [
@@ -446,7 +446,7 @@ export const kidEthnicProducts = [
 export const kidJeansProducts = [
     {
         id: 41,
-        name: "Kids Jeans 1",
+        name: "Boys Relaxed Fit Woven Cargo Trousers",
         price: 699,
         image: new URL("../assets/images/kid/kid/boys'clothing/jeans/1/1.1.jpeg", import.meta.url).href,
         variants: [
@@ -457,7 +457,7 @@ export const kidJeansProducts = [
     },
     {
         id: 42,
-        name: "Kids Jeans 2",
+        name: "Loose Fit Mid Rise Blue Jeans",
         price: 749,
         image: new URL("../assets/images/kid/kid/boys'clothing/jeans/2/2.1.jpeg", import.meta.url).href,
         variants: [
@@ -467,7 +467,7 @@ export const kidJeansProducts = [
     },
     {
         id: 43,
-        name: "Kids Jeans 3",
+        name: "Boys Mid-Rise Light Fade Stretchable Cargo Styles Jeans",
         price: 799,
         image: new URL("../assets/images/kid/kid/boys'clothing/jeans/3/3.1.jpeg", import.meta.url).href,
         variants: [
@@ -477,7 +477,7 @@ export const kidJeansProducts = [
     },
     {
         id: 44,
-        name: "Kids Jeans 4",
+        name: "kid's cargo jeans",
         price: 849,
         image: new URL("../assets/images/kid/kid/boys'clothing/jeans/4/4.1.jpeg", import.meta.url).href,
         variants: [
@@ -488,7 +488,7 @@ export const kidJeansProducts = [
     },
     {
         id: 45,
-        name: "Kids Jeans 5",
+        name: "Boys Comfort Mid-Rise Heavy Fade Jeans",
         price: 899,
         image: new URL("../assets/images/kid/kid/boys'clothing/jeans/5/5.1.jpeg", import.meta.url).href,
         variants: [
@@ -502,7 +502,7 @@ export const kidJeansProducts = [
 export const kidShirtsProducts = [
 {
     id: 46,
-    name: "Kids Shirt 1",
+    name: "Kids black and white cotton chequered casual shirt",
     price: 599,
     image: new URL("../assets/images/kid/kid/boys'clothing/shirts/1/1.1.jpeg", import.meta.url).href,
     variants: [
@@ -513,7 +513,7 @@ export const kidShirtsProducts = [
 },
 {
     id: 47,
-    name: "Kids Shirt 2",
+    name: "FRELURO Men Printed Casual White Shirt. ",
     price: 649,
     image: new URL("../assets/images/kid/kid/boys'clothing/shirts/2/2.1.jpeg", import.meta.url).href,
     variants: [
@@ -523,7 +523,7 @@ export const kidShirtsProducts = [
 },
 {
     id: 48,
-    name: "Kids Shirt 3",
+    name: "Boys Regular Fit Printed Casual Shirt. ",
     price: 699,
     image: new URL("../assets/images/kid/kid/boys'clothing/shirts/3/3.1.jpeg", import.meta.url).href,
     variants: [
@@ -533,7 +533,7 @@ export const kidShirtsProducts = [
 },
 {
     id: 49,
-    name: "Kids Shirt 4",
+    name: "boys' green and white geometric print shirt ",
     price: 699,
     image: new URL("../assets/images/kid/kid/boys'clothing/shirts/4/4.1.jpeg", import.meta.url).href,
     variants: [
@@ -543,7 +543,7 @@ export const kidShirtsProducts = [
 },
 {
     id: 50,
-    name: "Kids Shirt 5",
+    name: "pink regular fit casual shirt ",
     price: 749,
     image: new URL("../assets/images/kid/kid/boys'clothing/shirts/5/5.1.jpeg", import.meta.url).href,
     variants: [
@@ -553,7 +553,7 @@ export const kidShirtsProducts = [
 },
 {
     id: 51,
-    name: "Kids Shirt 6",
+    name: "Crimsoune Club Boys Brown Regular Fit Chequered Jacket. ",
     price: 799,
     image: new URL("../assets/images/kid/kid/boys'clothing/shirts/6/6.1.jpeg", import.meta.url).href,
     variants: [
@@ -564,7 +564,7 @@ export const kidShirtsProducts = [
 },
 {
     id: 52,
-    name: "Kids Shirt 7",
+    name: "boys' casual shirt in blue and black ",
     price: 849,
     image: new URL("../assets/images/kid/kid/boys'clothing/shirts/7/7.1.jpeg", import.meta.url).href,
     variants: [
@@ -576,7 +576,7 @@ export const kidShirtsProducts = [
 },
 {
     id: 53,
-    name: "Kids Shirt 8",
+    name: " Zans & Mens Boys Long Sleeve shirt",
     price: 849,
     image: new URL("../assets/images/kid/kid/boys'clothing/shirts/8/8.1.jpeg", import.meta.url).href,
     variants: [
@@ -586,7 +586,7 @@ export const kidShirtsProducts = [
 },
 {
     id: 54,
-    name: "Kids Shirt 9",
+    name: "white cotton blend textured casual shirt",
     price: 899,
     image: new URL("../assets/images/kid/kid/boys'clothing/shirts/9/9.1.jpeg", import.meta.url).href,
     variants: [
@@ -598,7 +598,7 @@ export const kidShirtsProducts = [
 },
 {
     id: 55,
-    name: "Kids Shirt 10",
+    name: "solid pink casual over-shirt",
     price: 949,
     image: new URL("../assets/images/kid/kid/boys'clothing/shirts/10/10.1.jpeg", import.meta.url).href,
     variants: [
@@ -613,7 +613,7 @@ export const kidShirtsProducts = [
 export const kidTShirtsProducts = [
 {
     id: 56,
-    name: "Kids T-Shirt 1",
+    name: "Vigilante brand t-shirt is a boys",
     price: 499,
     image: new URL("../assets/images/kid/kid/boys'clothing/tshirts/1/1.1.jpeg", import.meta.url).href,
     variants: [
@@ -623,7 +623,7 @@ export const kidTShirtsProducts = [
 },
 {
     id: 57,
-    name: "Kids T-Shirt 2",
+    name: "beige JACKBOY 705 Boys Graphic Polo T-Shirt ",
     price: 549,
     image: new URL("../assets/images/kid/kid/boys'clothing/tshirts/2/2.1.jpeg", import.meta.url).href,
     variants: [
@@ -633,7 +633,7 @@ export const kidTShirtsProducts = [
 },
 {
     id: 58,
-    name: "Kids T-Shirt 3",
+    name: "patterned cotton polo shirt ",
     price: 599,
     image: new URL("../assets/images/kid/kid/boys'clothing/tshirts/3/3.1.jpeg", import.meta.url).href,
     variants: [
@@ -643,7 +643,7 @@ export const kidTShirtsProducts = [
 },
 {
     id: 59,
-    name: "Kids T-Shirt 4",
+    name: "Googo Gaaga boy's cotton teddy printed t-shirt",
     price: 649,
     image: new URL("../assets/images/kid/kid/boys'clothing/tshirts/4/4.1.jpeg", import.meta.url).href,
     variants: [
@@ -655,7 +655,7 @@ export const kidTShirtsProducts = [
 },
 {
     id: 60,
-    name: "Kids T-Shirt 5",
+    name: "Little Ninja boys' cotton graphic t-shirt",
     price: 599,
     image: new URL("../assets/images/kid/kid/boys'clothing/tshirts/5/5.1.jpeg", import.meta.url).href,
     variants: [
@@ -665,7 +665,7 @@ export const kidTShirtsProducts = [
 },
 {
     id: 61,
-    name: "Kids T-Shirt 6",
+    name: "printed polo T-shirt",
     price: 649,
     image: new URL("../assets/images/kid/kid/boys'clothing/tshirts/6/6.1.jpeg", import.meta.url).href,
     variants: [
@@ -677,7 +677,7 @@ export const kidTShirtsProducts = [
 },
 {
     id: 62,
-    name: "Kids T-Shirt 7",
+    name: "floral print polo t-shirt ",
     price: 699,
     image: new URL("../assets/images/kid/kid/boys'clothing/tshirts/7/7.1.jpeg", import.meta.url).href,
     variants: [
@@ -688,7 +688,7 @@ export const kidTShirtsProducts = [
 },
 {
     id: 63,
-    name: "Kids T-Shirt 8",
+    name: " yellow and grey color-blocked polo T-shirt",
     price: 649,
     image: new URL("../assets/images/kid/kid/boys'clothing/tshirts/8/8.1.jpeg", import.meta.url).href,
     variants: [
@@ -698,7 +698,7 @@ export const kidTShirtsProducts = [
 },
 {
     id: 64,
-    name: "Kids T-Shirt 9",
+    name: "black printed polo t-shirt ",
     price: 699,
     image: new URL("../assets/images/kid/kid/boys'clothing/tshirts/9/9.1.jpeg", import.meta.url).href,
     variants: [
@@ -708,7 +708,7 @@ export const kidTShirtsProducts = [
 },
 {
     id: 65,
-    name: "Kids T-Shirt 10",
+    name: "cotton cartoon tiger print t-shirt ",
     price: 749,
     image: new URL("../assets/images/kid/kid/boys'clothing/tshirts/10/10.1.jpeg", import.meta.url).href,
     variants: [
@@ -720,7 +720,7 @@ export const kidTShirtsProducts = [
 export const kidGirlsBottomProducts = [
   {
     id: 66,
-    name: "Girls Bottom 1",
+    name: "light blue denim bell-bottom jeans ",
     price: 499,
     image: new URL("../assets/images/kid/kid/girls clothing/bottom wear/1/1.1.jpeg", import.meta.url).href,
     variants: [
@@ -731,7 +731,7 @@ export const kidGirlsBottomProducts = [
   },
   {
     id: 67,
-    name: "Girls Bottom 2",
+    name: "Button high-waisted black skinny jeans. ",
     price: 549,
     image: new URL("../assets/images/kid/kid/girls clothing/bottom wear/2/2.1.jpeg", import.meta.url).href,
     variants: [
@@ -741,7 +741,7 @@ export const kidGirlsBottomProducts = [
   },
   {
     id: 68,
-    name: "Girls Bottom 3",
+    name: "Guti flared girls purple jeans",
     price: 599,
     image: new URL("../assets/images/kid/kid/girls clothing/bottom wear/3/3.1.jpeg", import.meta.url).href,
     variants: [
@@ -751,7 +751,7 @@ export const kidGirlsBottomProducts = [
   },
   {
     id: 69,
-    name: "Girls Bottom 4",
+    name: " flared blue jeans",
     price: 599,
     image: new URL("../assets/images/kid/kid/girls clothing/bottom wear/4/4.1.jpeg", import.meta.url).href,
     variants: [
@@ -761,7 +761,7 @@ export const kidGirlsBottomProducts = [
   },
   {
     id: 70,
-    name: "Girls Bottom 5",
+    name: "pink denim washed joggers for girls ",
     price: 649,
     image: new URL("../assets/images/kid/kid/girls clothing/bottom wear/5/5.1.jpeg", import.meta.url).href,
     variants: [
@@ -771,7 +771,7 @@ export const kidGirlsBottomProducts = [
   },
   {
     id: 71,
-    name: "Girls Bottom 6",
+    name: "blue denim wide-leg jeans",
     price: 699,
     image: new URL("../assets/images/kid/kid/girls clothing/bottom wear/6/6.1.jpeg", import.meta.url).href,
     variants: [
@@ -782,7 +782,7 @@ export const kidGirlsBottomProducts = [
   },
   {
     id: 72,
-    name: "Girls Bottom 7",
+    name: "Solid girls Flared Purple Skirt",
     price: 749,
     image: new URL("../assets/images/kid/kid/girls clothing/bottom wear/7/7.1.jpeg", import.meta.url).href,
     variants: [
@@ -793,7 +793,7 @@ export const kidGirlsBottomProducts = [
   },
   {
     id: 73,
-    name: "Girls Bottom 8",
+    name: "blue denim mini skirt ",
     price: 749,
     image: new URL("../assets/images/kid/kid/girls clothing/bottom wear/8/8.1.jpeg", import.meta.url).href,
     variants: [
@@ -803,7 +803,7 @@ export const kidGirlsBottomProducts = [
   },
   {
     id: 74,
-    name: "Girls Bottom 9",
+    name: "Cutecumber Girls Denim Shorts ",
     price: 799,
     image: new URL("../assets/images/kid/kid/girls clothing/bottom wear/9/9.1.jpeg", import.meta.url).href,
     variants: [
@@ -814,7 +814,7 @@ export const kidGirlsBottomProducts = [
   },
   {
     id: 75,
-    name: "Girls Bottom 10",
+    name: " RUDRAEDGE baby girls casual T-shirt ",
     price: 849,
     image: new URL("../assets/images/kid/kid/girls clothing/bottom wear/10/10.1.jpeg", import.meta.url).href,
     variants: [
@@ -825,7 +825,7 @@ export const kidGirlsBottomProducts = [
   },
   {
     id: 76,
-    name: "Girls Bottom 11",
+    name: " baby girl's unicorn-themed top",
     price: 899,
     image: new URL("../assets/images/kid/kid/girls clothing/bottom wear/11/11.1.jpeg", import.meta.url).href,
     variants: [
@@ -837,7 +837,7 @@ export const kidGirlsBottomProducts = [
 export const kidGirlsDressProducts = [
   {
     id: 77,
-    name: "Girls Dress 1",
+    name: "Cutiepie Elegant Girls Frocks Dresses",
     price: 699,
     image: new URL("../assets/images/kid/kid/girls clothing/dresses/1/1.1.jpeg", import.meta.url).href,
     variants: [
@@ -848,7 +848,7 @@ export const kidGirlsDressProducts = [
   },
   {
     id: 78,
-    name: "Girls Dress 2",
+    name: "Pink mesh fairy princess costume set,",
     price: 749,
     image: new URL("../assets/images/kid/kid/girls clothing/dresses/2/2.1.jpeg", import.meta.url).href,
     variants: [
@@ -857,7 +857,7 @@ export const kidGirlsDressProducts = [
   },
   {
     id: 79,
-    name: "Girls Dress 3",
+    name: " light blue girls' party dress",
     price: 799,
     image: new URL("../assets/images/kid/kid/girls clothing/dresses/3/3.1.jpeg", import.meta.url).href,
     variants: [
@@ -867,7 +867,7 @@ export const kidGirlsDressProducts = [
   },
   {
     id: 80,
-    name: "Girls Dress 4",
+    name: "sage green ribbed knit dress",
     price: 799,
     image: new URL("../assets/images/kid/kid/girls clothing/dresses/4/4.1.jpeg", import.meta.url).href,
     variants: [
@@ -877,7 +877,7 @@ export const kidGirlsDressProducts = [
   },
   {
     id: 81,
-    name: "Girls Dress 5",
+    name: "Girls Cotton Blend Top & Bottom Set ",
     price: 849,
     image: new URL("../assets/images/kid/kid/girls clothing/dresses/5/5.1.jpeg", import.meta.url).href,
     variants: [
@@ -888,7 +888,7 @@ export const kidGirlsDressProducts = [
   },
   {
     id: 82,
-    name: "Girls Dress 6",
+    name: "baby girl's party dress set ",
     price: 899,
     image: new URL("../assets/images/kid/kid/girls clothing/dresses/6/6.1.jpeg", import.meta.url).href,
     variants: [
@@ -899,7 +899,7 @@ export const kidGirlsDressProducts = [
   },
   {
     id: 83,
-    name: "Girls Dress 7",
+    name: "girls' lavender georgette frock ",
     price: 949,
     image: new URL("../assets/images/kid/kid/girls clothing/dresses/7/7.1.jpeg", import.meta.url).href,
     variants: [
@@ -912,7 +912,7 @@ export const kidGirlsDressProducts = [
 export const kidGirlsEthnicProducts = [
   {
     id: 84,
-    name: "Girls Ethnic 1",
+    name: "festive and party kurta and skirt set",
     price: 799,
     image: new URL("../assets/images/kid/kid/girls clothing/ethnic wear/1/1.1.jpeg", import.meta.url).href,
     variants: [
@@ -922,7 +922,7 @@ export const kidGirlsEthnicProducts = [
   },
   {
     id: 85,
-    name: "Girls Ethnic 2",
+    name: " embroidered crop top and matching palazzo pants",
     price: 849,
     image: new URL("../assets/images/kid/kid/girls clothing/ethnic wear/2/2.1.jpeg", import.meta.url).href,
     variants: [
@@ -932,7 +932,7 @@ export const kidGirlsEthnicProducts = [
   },
   {
     id: 86,
-    name: "Girls Ethnic 3",
+    name: "bandhani printed with dhoti pants set",
     price: 899,
     image: new URL("../assets/images/kid/kid/girls clothing/ethnic wear/3/3.1.jpeg", import.meta.url).href,
     variants: [
@@ -942,7 +942,7 @@ export const kidGirlsEthnicProducts = [
   },
   {
     id: 87,
-    name: "Girls Ethnic 4",
+    name: "Anarkali suit set",
     price: 949,
     image: new URL("../assets/images/kid/kid/girls clothing/ethnic wear/4/4.1.jpeg", import.meta.url).href,
     variants: [
@@ -952,7 +952,7 @@ export const kidGirlsEthnicProducts = [
   },
   {
     id: 88,
-    name: "Girls Ethnic 5",
+    name: "Ethnic Kurta and Palazzo Set",
     price: 999,
     image: new URL("../assets/images/kid/kid/girls clothing/ethnic wear/5/5.1.jpeg", import.meta.url).href,
     variants: [
@@ -963,7 +963,7 @@ export const kidGirlsEthnicProducts = [
   },
   {
     id: 89,
-    name: "Girls Ethnic 6",
+    name: "Anarkali-style kurta",
     price: 1049,
     image: new URL("../assets/images/kid/kid/girls clothing/ethnic wear/6/6.1.jpeg", import.meta.url).href,
     variants: [
@@ -974,7 +974,7 @@ export const kidGirlsEthnicProducts = [
   },
   {
     id: 90,
-    name: "Girls Ethnic 7",
+    name: "floral embroidered kurta with a matching sharara set",
     price: 1099,
     image: new URL("../assets/images/kid/kid/girls clothing/ethnic wear/7/7.1.jpeg", import.meta.url).href,
     variants: [
@@ -984,7 +984,7 @@ export const kidGirlsEthnicProducts = [
   },
   {
     id: 91,
-    name: "Girls Ethnic 8",
+    name: "Bandhani printed kurti and sharara set",
     price: 1149,
     image: new URL("../assets/images/kid/kid/girls clothing/ethnic wear/8/8.1.jpeg", import.meta.url).href,
     variants: [
@@ -996,7 +996,7 @@ export const kidGirlsEthnicProducts = [
 export const kidGirlsTopProducts = [
   {
     id: 92,
-    name: "Girls Top 1",
+    name: "short-sleeve crop top",
     price: 499,
     image: new URL("../assets/images/kid/kid/girls clothing/tshirt and top/1/1.1.jpeg", import.meta.url).href,
     variants: [
@@ -1006,7 +1006,7 @@ export const kidGirlsTopProducts = [
   },
   {
     id: 93,
-    name: "Girls Top 2",
+    name: "long-sleeve crop top",
     price: 549,
     image: new URL("../assets/images/kid/kid/girls clothing/tshirt and top/2/2.1.jpeg", import.meta.url).href,
     variants: [
@@ -1016,7 +1016,7 @@ export const kidGirlsTopProducts = [
   },
   {
     id: 94,
-    name: "Girls Top 3",
+    name: "black long-sleeved crop top",
     price: 599,
     image: new URL("../assets/images/kid/kid/girls clothing/tshirt and top/3/3.1.jpeg", import.meta.url).href,
     variants: [
@@ -1026,7 +1026,7 @@ export const kidGirlsTopProducts = [
   },
   {
     id: 95,
-    name: "Girls Top 4",
+    name: "black graphic t-shirt ",
     price: 649,
     image: new URL("../assets/images/kid/kid/girls clothing/tshirt and top/4/4.1.jpeg", import.meta.url).href,
     variants: [
@@ -1036,7 +1036,7 @@ export const kidGirlsTopProducts = [
   },
   {
     id: 96,
-    name: "Girls Top 5",
+    name: "Girls Top 5floral printed sleeveless top",
     price: 699,
     image: new URL("../assets/images/kid/kid/girls clothing/tshirt and top/5/5.1.jpeg", import.meta.url).href,
     variants: [
@@ -1047,7 +1047,7 @@ export const kidGirlsTopProducts = [
   },
   {
     id: 97,
-    name: "Girls Top 6",
+    name: "red and black crop top",
     price: 749,
     image: new URL("../assets/images/kid/kid/girls clothing/tshirt and top/6/6.1.jpeg", import.meta.url).href,
     variants: [
@@ -1057,7 +1057,7 @@ export const kidGirlsTopProducts = [
   },
   {
     id: 98,
-    name: "Girls Top 7",
+    name: " Party Cotton Blend Crop Top",
     price: 799,
     image: new URL("../assets/images/kid/kid/girls clothing/tshirt and top/7/7.1.jpeg", import.meta.url).href,
     variants: [
@@ -1069,7 +1069,7 @@ export const kidGirlsTopProducts = [
 export const menBottomProducts = [
   {
     id: 99,
-    name: "Men Bottom 1",
+    name: " Loose Fit Men Silver Trousers",
     price: 999,
     image: new URL("../assets/images/man/man/bottomwear/bottom 1/1.1.jpg", import.meta.url).href,
     variants: [
@@ -1080,7 +1080,7 @@ export const menBottomProducts = [
   },
   {
     id: 100,
-    name: "Men Bottom 2",
+    name: "Men's grey cargo joggers ",
     price: 1049,
     image: new URL("../assets/images/man/man/bottomwear/bottom 2/2.1.jpg", import.meta.url).href,
     variants: [
@@ -1091,7 +1091,7 @@ export const menBottomProducts = [
   },
   {
     id: 101,
-    name: "Men Bottom 3",
+    name: "Men's casual black cargo pants ",
     price: 1099,
     image: new URL("../assets/images/man/man/bottomwear/bottom 3/3.1.jpg", import.meta.url).href,
     variants: [
@@ -1102,7 +1102,7 @@ export const menBottomProducts = [
   },
   {
     id: 102,
-    name: "Men Bottom 4",
+    name: "Men's beige  casual pants",
     price: 1149,
     image: new URL("../assets/images/man/man/bottomwear/bottom 4/4.1.jpg", import.meta.url).href,
     variants: [
@@ -1113,7 +1113,7 @@ export const menBottomProducts = [
   },
   {
     id: 103,
-    name: "Men Bottom 5",
+    name: "Men Track Pants",
     price: 1199,
     image: new URL("../assets/images/man/man/bottomwear/bottom 5/5.1.jpg", import.meta.url).href,
     variants: [
@@ -1124,7 +1124,7 @@ export const menBottomProducts = [
   },
   {
     id: 104,
-    name: "Men Bottom 6",
+    name: "Men's Lycra Blend Korean Trousers",
     price: 1249,
     image: new URL("../assets/images/man/man/bottomwear/bottom 6/6.1.jpg", import.meta.url).href,
     variants: [
@@ -1135,7 +1135,7 @@ export const menBottomProducts = [
   },
   {
     id: 105,
-    name: "Men Bottom 7",
+    name: "Beige textured  trousers",
     price: 1299,
     image: new URL("../assets/images/man/man/bottomwear/bottom 7/7.1.jpg", import.meta.url).href,
     variants: [
@@ -1146,7 +1146,7 @@ export const menBottomProducts = [
   },
   {
     id: 106,
-    name: "Men Bottom 8",
+    name: " Men's Dark Grey Loose Baggy Fit Washed Jeans",
     price: 1349,
     image: new URL("../assets/images/man/man/bottomwear/bottom 8/8.1.jpg", import.meta.url).href,
     variants: [
@@ -1157,7 +1157,7 @@ export const menBottomProducts = [
   },
   {
     id: 107,
-    name: "Men Bottom 9",
+    name: "Light Wash Straight Leg Jeans",
     price: 1399,
     image: new URL("../assets/images/man/man/bottomwear/bottom 9/9.1.jpg", import.meta.url).href,
     variants: [
@@ -1168,7 +1168,7 @@ export const menBottomProducts = [
   },
   {
     id: 108,
-    name: "Men Bottom 10",
+    name: "white loose fit baggy jeans",
     price: 1449,
     image: new URL("../assets/images/man/man/bottomwear/bottom 10/10.1.jpg", import.meta.url).href,
     variants: [
@@ -1181,7 +1181,7 @@ export const menBottomProducts = [
 export const menEthnicProducts = [
   {
     id: 109,
-    name: "Men Ethnic 1",
+    name: "Men's white printed cotton blend kurta ",
     price: 1499,
     image: new URL("../assets/images/man/man/Ethnic wear/Ethnic 1/1.1.jpg", import.meta.url).href,
     variants: [
@@ -1192,7 +1192,7 @@ export const menEthnicProducts = [
   },
   {
     id: 110,
-    name: "Men Ethnic 2",
+    name: "white cotton blend kurta pyjama set",
     price: 1549,
     image: new URL("../assets/images/man/man/Ethnic wear/Ethnic 2/2.1.jpg", import.meta.url).href,
     variants: [
@@ -1203,7 +1203,7 @@ export const menEthnicProducts = [
   },
   {
     id: 111,
-    name: "Men Ethnic 3",
+    name: "peach-colored jacquard silk kurta ",
     price: 1599,
     image: new URL("../assets/images/man/man/Ethnic wear/Ethnic 3/3.1.jpg", import.meta.url).href,
     variants: [
@@ -1214,7 +1214,7 @@ export const menEthnicProducts = [
   },
   {
     id: 112,
-    name: "Men Ethnic 4",
+    name: "Men's white solid cotton dhoti",
     price: 1649,
     image: new URL("../assets/images/man/man/Ethnic wear/Ethnic 4/4.1.jpg", import.meta.url).href,
     variants: [
@@ -1225,7 +1225,7 @@ export const menEthnicProducts = [
   },
   {
     id: 113,
-    name: "Men Ethnic 5",
+    name: "Unique Fort Men kurta pajama set ",
     price: 1699,
     image: new URL("../assets/images/man/man/Ethnic wear/Ethnic 5/5.1.jpg", import.meta.url).href,
     variants: [
@@ -1236,7 +1236,7 @@ export const menEthnicProducts = [
   },
   {
     id: 114,
-    name: "Men Ethnic 6",
+    name: "white kurta dhoti set for men ",
     price: 1749,
     image: new URL("../assets/images/man/man/Ethnic wear/Ethnic 6/6.1.jpg", import.meta.url).href,
     variants: [
@@ -1247,7 +1247,7 @@ export const menEthnicProducts = [
   },
   {
     id: 115,
-    name: "Men Ethnic 7",
+    name: "Men Floral Print Viscose Rayon Straight Kurta",
     price: 1799,
     image: new URL("../assets/images/man/man/Ethnic wear/Ethnic 7/7.1.jpg", import.meta.url).href,
     variants: [
@@ -1258,7 +1258,7 @@ export const menEthnicProducts = [
   },
   {
     id: 116,
-    name: "Men Ethnic 8",
+    name: "men's sequined embroidered traditional kurta",
     price: 1849,
     image: new URL("../assets/images/man/man/Ethnic wear/Ethnic 8/8.1.jpg", import.meta.url).href,
     variants: [
@@ -1269,7 +1269,7 @@ export const menEthnicProducts = [
   },
   {
     id: 117,
-    name: "Men Ethnic 9",
+    name: "black cotton kurta and white salwar set for men",
     price: 1899,
     image: new URL("../assets/images/man/man/Ethnic wear/Ethnic 9/9.1.jpg", import.meta.url).href,
     variants: [
@@ -1280,7 +1280,7 @@ export const menEthnicProducts = [
   },
   {
     id: 118,
-    name: "Men Ethnic 10",
+    name: "Sage Green Embroidered Straight Kurta for Men",
     price: 1949,
     image: new URL("../assets/images/man/man/Ethnic wear/Ethnic 10/10.1.jpg", import.meta.url).href,
     variants: [
@@ -1293,7 +1293,7 @@ export const menEthnicProducts = [
 export const menTopProducts = [
   {
     id: 119,
-    name: "Men Top 1",
+    name: "Slim Fit Polo Shirt",
     price: 899,
     image: new URL("../assets/images/man/man/Topwear/Top 1/1.1.jpg", import.meta.url).href,
     variants: [
@@ -1304,7 +1304,7 @@ export const menTopProducts = [
   },
   {
     id: 120,
-    name: "Men Top 2",
+    name: "Spykar Sage Green Blended Slim Fit Polo T-shirt",
     price: 949,
     image: new URL("../assets/images/man/man/Topwear/Top 2/2.1.jpg", import.meta.url).href,
     variants: [
@@ -1315,7 +1315,7 @@ export const menTopProducts = [
   },
   {
     id: 121,
-    name: "Men Top 3",
+    name: "Purple textured casual shirt",
     price: 999,
     image: new URL("../assets/images/man/man/Topwear/Top 3/3.1.jpg", import.meta.url).href,
     variants: [
@@ -1326,7 +1326,7 @@ export const menTopProducts = [
   },
   {
     id: 122,
-    name: "Men Top 4",
+    name: "Men's light blue striped casual shirt",
     price: 1049,
     image: new URL("../assets/images/man/man/Topwear/Top 4/4.1.jpg", import.meta.url).href,
     variants: [
@@ -1337,7 +1337,7 @@ export const menTopProducts = [
   },
   {
     id: 123,
-    name: "Men Top 5",
+    name: "Men's solid peach regular fit shirt",
     price: 1099,
     image: new URL("../assets/images/man/man/Topwear/Top 5/5.1.jpg", import.meta.url).href,
     variants: [
@@ -1348,7 +1348,7 @@ export const menTopProducts = [
   },
   {
     id: 124,
-    name: "Men Top 6",
+    name: " Men's Casual Striped Shirt in Grey",
     price: 1149,
     image: new URL("../assets/images/man/man/Topwear/Top 6/6.1.jpg", import.meta.url).href,
     variants: [
@@ -1359,7 +1359,7 @@ export const menTopProducts = [
   },
   {
     id: 125,
-    name: "Men Top 7",
+    name: "Men's  Round Neck Dark Green T-Shirt",
     price: 1199,
     image: new URL("../assets/images/man/man/Topwear/Top 7/7.1.jpg", import.meta.url).href,
     variants: [
@@ -1370,7 +1370,7 @@ export const menTopProducts = [
   },
   {
     id: 126,
-    name: "Men Top 8",
+    name: "Men's Round Neck Brown T-Shirt",
     price: 1249,
     image: new URL("../assets/images/man/man/Topwear/Top 8/8.1.jpg", import.meta.url).href,
     variants: [
@@ -1381,7 +1381,7 @@ export const menTopProducts = [
   },
   {
     id: 127,
-    name: "Men Top 9",
+    name: "Black Crew Neck T-Shirt from ",
     price: 1299,
     image: new URL("../assets/images/man/man/Topwear/Top 9/9.1.jpg", import.meta.url).href,
     variants: [
@@ -1392,7 +1392,7 @@ export const menTopProducts = [
   },
   {
     id: 128,
-    name: "Men Top 10",
+    name: "Men's Polo Neck T-Shirt in Black",
     price: 1349,
     image: new URL("../assets/images/man/man/Topwear/Top 10/10.1.jpg", import.meta.url).href,
     variants: [
