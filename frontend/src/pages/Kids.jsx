@@ -1,5 +1,5 @@
-import React from 'react'
-
+import React, { useState, useEffect } from 'react'
+import axios from "axios";
 import ProductCard from '../components/ProductCard'
 import { 
   kidEthnicProducts, 
@@ -13,6 +13,29 @@ import {
 } from '../data/products'
 
 const Kids = () => {
+  const [extraProducts, setExtraProducts] = useState({
+    boys: [],
+    girls: [],
+  });
+
+  useEffect(() => {
+    fetchSellerProducts();
+  }, []);
+
+  const fetchSellerProducts = async () => {
+    try {
+      const { data } = await axios.get("http://localhost:5000/api/products/all");
+      const kidsProducts = data.products.filter((p) => p.category === "Kids");
+      
+      setExtraProducts({
+        boys: kidsProducts.filter((p) => p.subcategory === "Boys clothing"),
+        girls: kidsProducts.filter((p) => p.subcategory === "Girls clothing"),
+      });
+    } catch (error) {
+      console.error("Error fetching seller products:", error);
+    }
+  };
+
   return (
     <div>
     <h1 className='Title'>Kids </h1>
@@ -56,6 +79,9 @@ const Kids = () => {
         {kidGirlsBottomProducts.map((p) => (
           <ProductCard key={p.id} product={p} />
         ))}
+        {extraProducts.girls.map((p) => (
+          <ProductCard key={p._id} product={{ ...p, id: p._id }} />
+        ))}
       </div>
 
       <h3>Girls Dresses</h3>
@@ -79,6 +105,9 @@ const Kids = () => {
       <div className="products">
         {kidGirlsTopProducts.map((p) => (
           <ProductCard key={p.id} product={p} />
+        ))}
+        {extraProducts.boys.map((p) => (
+          <ProductCard key={p._id} product={{ ...p, id: p._id }} />
         ))}
       </div>
     </div>

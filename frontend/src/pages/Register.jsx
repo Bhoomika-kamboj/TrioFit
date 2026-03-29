@@ -1,5 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import bgVideo from "../assets/images/Video bg/background.mp4";
 
 const Register = () => {
   const [role, setRole] = useState("customer");
@@ -12,16 +14,32 @@ const Register = () => {
   const [ifscCode, setIfscCode] = useState("");
   const [shopName, setShopName] = useState("");
   const [gstNumber, setGstNumber] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleRegister = async () => {
+    setError("");
+
+    if (!fullName || !email || !password) {
+      setError("Please fill all required fields");
+      return;
+    }
+
     if (password !== confirmPassword) {
-      alert("Passwords do not match!");
+      setError("Passwords do not match!");
+      return;
+    }
+
+    if (role === "seller" && (!shopName || !gstNumber)) {
+      setError("Shop name and GST number are required for sellers");
       return;
     }
 
     try {
+      setLoading(true);
       const { data } = await axios.post(
-        "http://localhost:5000/api/auth/register", // ✅ correct route
+        "http://localhost:5000/api/auth/register",
         {
           fullName,
           email,
@@ -37,42 +55,101 @@ const Register = () => {
       );
 
       console.log("Registered successfully:", data);
-     alert("Account created successfully!");
-window.location.href = "/login";
+      alert("Account created successfully! Redirecting to login...");
+      navigate("/login");
     } catch (error) {
       console.error("Registration failed:", error.response?.data || error.message);
-      alert(error.response?.data?.message || "Registration failed");
+      setError(error.response?.data?.message || "Registration failed");
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
-    <div className="auth-container">
-      <h2>Create Account</h2>
+    <div className="auth-page">
+      <div className="auth-container">
+        <video autoPlay loop muted className="card-video">
+          <source src={bgVideo} type="video/mp4" />
+        </video>
 
-      <select value={role} onChange={(e) => setRole(e.target.value)}>
-        <option value="customer">Customer</option>
-        <option value="seller">Seller</option>
-      </select>
+        <div className="auth-content">
+          <h2>Create Account</h2>
 
-      <input type="text" placeholder="Full Name" value={fullName} onChange={(e) => setFullName(e.target.value)} />
-      <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-      <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-      <input type="password" placeholder="Confirm Password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+          {error && <div className="auth-error">{error}</div>}
 
-      <h4>Bank Details</h4>
-      <input type="text" placeholder="Account Holder Name" value={accountHolderName} onChange={(e) => setAccountHolderName(e.target.value)} />
-      <input type="text" placeholder="Account Number" value={accountNumber} onChange={(e) => setAccountNumber(e.target.value)} />
-      <input type="text" placeholder="IFSC Code" value={ifscCode} onChange={(e) => setIfscCode(e.target.value)} />
+          <select value={role} onChange={(e) => setRole(e.target.value)}>
+            <option value="customer">Customer</option>
+            <option value="seller">Seller</option>
+          </select>
 
-      {role === "seller" && (
-        <>
-          <h4>Seller Details</h4>
-          <input type="text" placeholder="Shop / Brand Name" value={shopName} onChange={(e) => setShopName(e.target.value)} />
-          <input type="text" placeholder="GST Number" value={gstNumber} onChange={(e) => setGstNumber(e.target.value)} />
-        </>
-      )}
+          <input
+            type="text"
+            placeholder="Full Name"
+            value={fullName}
+            onChange={(e) => setFullName(e.target.value)}
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Confirm Password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+          />
 
-      <button onClick={handleRegister}>Create Account</button>
+          <h4>Bank Details</h4>
+          <input
+            type="text"
+            placeholder="Account Holder Name"
+            value={accountHolderName}
+            onChange={(e) => setAccountHolderName(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Account Number"
+            value={accountNumber}
+            onChange={(e) => setAccountNumber(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="IFSC Code"
+            value={ifscCode}
+            onChange={(e) => setIfscCode(e.target.value)}
+          />
+
+          {role === "seller" && (
+            <>
+              <h4>Seller Details</h4>
+              <input
+                type="text"
+                placeholder="Shop / Brand Name"
+                value={shopName}
+                onChange={(e) => setShopName(e.target.value)}
+              />
+              <input
+                type="text"
+                placeholder="GST Number"
+                value={gstNumber}
+                onChange={(e) => setGstNumber(e.target.value)}
+              />
+            </>
+          )}
+
+          <button onClick={handleRegister} disabled={loading}>
+            {loading ? "Creating Account..." : "Create Account"}
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

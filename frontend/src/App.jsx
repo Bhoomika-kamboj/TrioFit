@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 // Components
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 // Pages
 import Home from "./pages/Home";
@@ -23,6 +24,10 @@ import Men from "./pages/Men";
 import Kids from "./pages/Kids";
 import Checkout from "./pages/Checkout";
 import OrderSuccess from "./pages/OrderSuccess";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Profile from "./pages/Profile";
+import SellerDashboard from "./pages/SellerDashboard";
 
 
 
@@ -31,9 +36,14 @@ function App() {
   return (
     <>
       <Header />
+      <ScrollToTop />
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/seller-dashboard" element={<SellerDashboard />} />
         <Route path="/faq" element={<Frequentlyaskedques />} />
         <Route path="/careers" element={<CareerOpportunities />} />
         <Route path="/privacy" element={<PrivacyAndPolicy />} />

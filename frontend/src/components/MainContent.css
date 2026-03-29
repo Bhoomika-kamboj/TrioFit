@@ -1,0 +1,16 @@
+/* ===============================
+   MAIN CONTENT - OFFSET FOR FIXED HEADER
+================================ */
+
+.main-content {
+  padding-top: 120px; /* Fixed header height + spacing */
+  min-height: 100vh;
+  flex: 1;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 110px; /* Slightly less padding on mobile if header resizes */
+  }
+}

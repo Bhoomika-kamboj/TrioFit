@@ -1,9 +1,11 @@
 import { topProducts, bottomProducts, ethnicProducts, kidEthnicProducts } from "../data/products";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Popular = () => {
-  const popularItems = [
+  const [extraProducts, setExtraProducts] = useState([]);
+  const baseItems = [
     topProducts[0],
     bottomProducts[0],
     ethnicProducts[0],
@@ -11,6 +13,21 @@ const Popular = () => {
     topProducts[1],
     bottomProducts[1],
   ];
+
+  useEffect(() => {
+    fetchSellerProducts();
+  }, []);
+
+  const fetchSellerProducts = async () => {
+    try {
+      const { data } = await axios.get("http://localhost:5000/api/products/all");
+      setExtraProducts(data.products.slice(0, 4)); // Get first 4 seller products
+    } catch (error) {
+      console.error("Error fetching seller products:", error);
+    }
+  };
+
+  const popularItems = [...baseItems, ...extraProducts.map(p => ({ ...p, id: p._id }))];
 
   const sliderRef = useRef(null);
   const navigate = useNavigate();

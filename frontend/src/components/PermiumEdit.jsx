@@ -5,7 +5,7 @@ const PremiumEdit = () => {
   return (
     <section className="premium-section">
       <div className="premium-header">
-        <h2>The Premium Edit</h2>
+        <h1 className="Title">The Premium Edit</h1>
         <p>Timeless picks from premium brands</p>
       </div>
 

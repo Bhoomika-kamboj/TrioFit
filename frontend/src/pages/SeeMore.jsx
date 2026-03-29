@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
+import axios from "axios";
 import { addToCart } from "../redux/cartSlice";
 import { 
   topProducts, 
@@ -22,31 +23,14 @@ const SeeMore = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
   const productId = Number(id);
 
-  const product =
-  topProducts.find((p) => p.id === productId) ||
-  bottomProducts.find((p) => p.id === productId) ||
-  ethnicProducts.find((p) => p.id === productId) ||
-  menTopProducts.find((p) => p.id === productId) ||
-  menBottomProducts.find((p) => p.id === productId) ||
-  menEthnicProducts.find((p) => p.id === productId) ||
-  kidEthnicProducts.find((p) => p.id === productId) ||
-  kidJeansProducts.find((p) => p.id === productId) ||
-  kidShirtsProducts.find((p) => p.id === productId) ||
-  kidTShirtsProducts.find((p) => p.id === productId) ||
-  kidGirlsBottomProducts.find((p) => p.id === productId) ||
-  kidGirlsDressProducts.find((p) => p.id === productId) ||
-  kidGirlsEthnicProducts.find((p) => p.id === productId) ||
-  kidGirlsTopProducts.find((p) => p.id === productId);
-
-  if (!product) return <p>Product not found 😢</p>;
-
-  const [main, setMain] = useState(product.variants[0] || product.image);
-  const [selectedSize, setSelectedSize] = useState(product.sizes ? product.sizes[0] : "M");
+  // All hooks MUST be called unconditionally at the top level
+  const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [main, setMain] = useState(null);
+  const [selectedSize, setSelectedSize] = useState("M");
   const [quantity, setQuantity] = useState(1);
-
   const [review, setReview] = useState("");
   const [showReviewSuccess, setShowReviewSuccess] = useState(false);
   const [comments, setComments] = useState(() => {
@@ -58,13 +42,56 @@ const SeeMore = () => {
   });
 
   useEffect(() => {
+    const fetchProduct = async () => {
+      // Try to find in static data first
+      let foundProduct =
+        topProducts.find((p) => p.id === productId) ||
+        bottomProducts.find((p) => p.id === productId) ||
+        ethnicProducts.find((p) => p.id === productId) ||
+        menTopProducts.find((p) => p.id === productId) ||
+        menBottomProducts.find((p) => p.id === productId) ||
+        menEthnicProducts.find((p) => p.id === productId) ||
+        kidEthnicProducts.find((p) => p.id === productId) ||
+        kidJeansProducts.find((p) => p.id === productId) ||
+        kidShirtsProducts.find((p) => p.id === productId) ||
+        kidTShirtsProducts.find((p) => p.id === productId) ||
+        kidGirlsBottomProducts.find((p) => p.id === productId) ||
+        kidGirlsDressProducts.find((p) => p.id === productId) ||
+        kidGirlsEthnicProducts.find((p) => p.id === productId) ||
+        kidGirlsTopProducts.find((p) => p.id === productId);
+
+      // If not found in static data, try API
+      if (!foundProduct && isNaN(productId)) {
+        try {
+          const { data } = await axios.get(`http://localhost:5000/api/products/${id}`);
+          foundProduct = data.product;
+        } catch (error) {
+          console.error("Error fetching product:", error);
+        }
+      }
+
+      if (foundProduct) {
+        setProduct(foundProduct);
+        setMain(foundProduct.variants?.[0] || foundProduct.image);
+        setSelectedSize(foundProduct.sizes ? foundProduct.sizes[0] : "M");
+      }
+      setLoading(false);
+    };
+
+    fetchProduct();
+  }, [id, productId]);
+
+  useEffect(() => {
     localStorage.setItem(`reviews-${productId}`, JSON.stringify(comments));
   }, [comments, productId]);
+
+  if (loading) return <p>Loading...</p>;
+  if (!product) return <p>Product not found 😢</p>;
 
   const handleAddToCart = () => {
     dispatch(
       addToCart({
-        id: product.id,
+        id: product.id || product._id,
         name: product.name,
         price: product.price,
         selectedVariant: main,
@@ -80,7 +107,7 @@ const SeeMore = () => {
     navigate("/checkout", {
       state: {
         selectedProduct: {
-          id: product.id,
+          id: product.id || product._id,
           name: product.name,
           image: main || product.image,
           price: product.price,
