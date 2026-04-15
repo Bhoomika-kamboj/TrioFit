@@ -30,12 +30,30 @@ const Women = () => {
   };
 
   return (
-    <div>
-      <h1 className='Title'>Women</h1>
-      <br />
+    <main className="catalog-page">
+      <section className="catalog-hero">
+        <div className="catalog-hero-card">
+          <h1 className='Title'>Women</h1>
+          <p>Fresh fits, cleaner cards, and a more responsive layout for every screen size.</p>
+        </div>
+        <div className="catalog-hero-panel">
+          <div className="catalog-stat">
+            <strong>Topwear</strong>
+            <p>Polished shirts, tees, and statement silhouettes.</p>
+          </div>
+          <div className="catalog-stat">
+            <strong>Bottomwear</strong>
+            <p>Everyday denim, tailored fits, and easy movement.</p>
+          </div>
+          <div className="catalog-stat">
+            <strong>Ethnic wear</strong>
+            <p>Festive looks with faster browsing into See More.</p>
+          </div>
+        </div>
+      </section>
 
+      <section className="catalog-section">
       <h3 className='mini-title'>TopWear</h3>
-      <br />
       <div className="products">
         {topProducts.map((p) => (
           <ProductCard key={p.id} product={p} />
@@ -44,10 +62,10 @@ const Women = () => {
           <ProductCard key={p._id} product={{ ...p, id: p._id }} />
         ))}
       </div>
+      </section>
 
-      <br />
+      <section className="catalog-section">
       <h3 className='mini-title'>BottomWear</h3>
-      <br />
       <div className="products">
         {bottomProducts.map((p) => (
           <ProductCard key={p.id} product={p} />
@@ -56,10 +74,10 @@ const Women = () => {
           <ProductCard key={p._id} product={{ ...p, id: p._id }} />
         ))}
       </div>
+      </section>
 
-      <br />
+      <section className="catalog-section">
       <h3 className='mini-title'>Ethnicwear</h3>
-      <br />
       <div className="products">
         {ethnicProducts.map((p) => (
           <ProductCard key={p.id} product={p} />
@@ -68,8 +86,9 @@ const Women = () => {
           <ProductCard key={p._id} product={{ ...p, id: p._id }} />
         ))}
       </div>
+      </section>
 
-    </div>
+    </main>
   )
 }
 

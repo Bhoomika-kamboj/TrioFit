@@ -2,7 +2,7 @@
 import Offer from "../components/Offer"; // <-- import karo
 import Popular from "../components/Popular";
 import Category from "../components/Category";
-import PremiumEdit from "../components/PermiumEdit";
+
 const Home = () => {
   return (
     <main className="home">
@@ -13,8 +13,7 @@ const Home = () => {
       <Popular />
       {/* Category section */}
       <Category />
-{/*Premium Edit */}
-<PremiumEdit />
+
 
 
       

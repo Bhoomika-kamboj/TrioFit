@@ -18,7 +18,7 @@ import SupportTeam from "./pages/SupportTeam";
 import TermsAndCondition from "./pages/TermsAndCondition";
 import AboutUs from "./pages/AboutUs";
 import Stores from "./pages/OurStore";
-import SeeMore from "./pages/SeeMore";
+import SeeMorePage from "./pages/SeeMorePage";
 import Women from "./pages/Women";
 import Men from "./pages/Men";
 import Kids from "./pages/Kids";
@@ -56,7 +56,7 @@ function App() {
         <Route path="/Women" element={<Women />} />
         <Route path="/Men" element={<Men />} />
         <Route path="/Kids" element={<Kids />} />
-      <Route path="/see-more/:id" element={<SeeMore />} />
+      <Route path="/see-more/:id" element={<SeeMorePage />} />
       <Route path="/checkout" element={<Checkout />} />
       <Route path="/OrderSuccess" element={<OrderSuccess />} />
       

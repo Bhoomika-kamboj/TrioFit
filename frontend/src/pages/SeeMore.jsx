@@ -1,8 +1,9 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useDispatch } from "react-redux";
 import axios from "axios";
 import { addToCart } from "../redux/cartSlice";
+
 import { 
   topProducts, 
   bottomProducts, 
@@ -19,11 +20,32 @@ import {
   kidGirlsEthnicProducts,
   kidGirlsTopProducts
 } from "../data/products";
+
+const staticCollections = [
+  topProducts,
+  bottomProducts,
+  ethnicProducts,
+  menTopProducts,
+  menBottomProducts,
+  menEthnicProducts,
+  kidEthnicProducts,
+  kidJeansProducts,
+  kidShirtsProducts,
+  kidTShirtsProducts,
+  kidGirlsBottomProducts,
+  kidGirlsDressProducts,
+  kidGirlsEthnicProducts,
+  kidGirlsTopProducts,
+];
+
+const findStaticProduct = (productId) =>
+  staticCollections.flat().find((product) => String(product.id) === String(productId));
 const SeeMore = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const productId = Number(id);
+  const [showTryOn, setShowTryOn] = useState(false);
 
   // All hooks MUST be called unconditionally at the top level
   const [product, setProduct] = useState(null);
@@ -43,24 +65,8 @@ const SeeMore = () => {
 
   useEffect(() => {
     const fetchProduct = async () => {
-      // Try to find in static data first
-      let foundProduct =
-        topProducts.find((p) => p.id === productId) ||
-        bottomProducts.find((p) => p.id === productId) ||
-        ethnicProducts.find((p) => p.id === productId) ||
-        menTopProducts.find((p) => p.id === productId) ||
-        menBottomProducts.find((p) => p.id === productId) ||
-        menEthnicProducts.find((p) => p.id === productId) ||
-        kidEthnicProducts.find((p) => p.id === productId) ||
-        kidJeansProducts.find((p) => p.id === productId) ||
-        kidShirtsProducts.find((p) => p.id === productId) ||
-        kidTShirtsProducts.find((p) => p.id === productId) ||
-        kidGirlsBottomProducts.find((p) => p.id === productId) ||
-        kidGirlsDressProducts.find((p) => p.id === productId) ||
-        kidGirlsEthnicProducts.find((p) => p.id === productId) ||
-        kidGirlsTopProducts.find((p) => p.id === productId);
+      let foundProduct = findStaticProduct(productId);
 
-      // If not found in static data, try API
       if (!foundProduct && isNaN(productId)) {
         try {
           const { data } = await axios.get(`http://localhost:5000/api/products/${id}`);
@@ -72,8 +78,6 @@ const SeeMore = () => {
 
       if (foundProduct) {
         setProduct(foundProduct);
-        setMain(foundProduct.variants?.[0] || foundProduct.image);
-        setSelectedSize(foundProduct.sizes ? foundProduct.sizes[0] : "M");
       }
       setLoading(false);
     };
@@ -82,8 +86,32 @@ const SeeMore = () => {
   }, [id, productId]);
 
   useEffect(() => {
+    if (!product) {
+      return;
+    }
+
+    const gallery = product.variants?.length ? product.variants : [product.image];
+    const nextSize = product.sizes?.length ? product.sizes[0] : "M";
+
+    setMain(gallery[0]);
+    setSelectedSize(nextSize);
+    setQuantity(1);
+    setShowTryOn(false);
+  }, [product]);
+
+  useEffect(() => {
     localStorage.setItem(`reviews-${productId}`, JSON.stringify(comments));
   }, [comments, productId]);
+
+  const galleryImages = useMemo(() => {
+    if (!product) {
+      return [];
+    }
+
+    return product.variants?.length ? product.variants : [product.image];
+  }, [product]);
+
+  const availableSizes = product?.sizes?.length ? product.sizes : ["XS", "S", "M", "L", "XL"];
 
   if (loading) return <p>Loading...</p>;
   if (!product) return <p>Product not found 😢</p>;
@@ -182,7 +210,7 @@ const SeeMore = () => {
           />
         </label>
       </div>
-
+     
       <div className="actions-container">
         <button className="add-to-cart-btn" onClick={handleAddToCart}>
           Add to Cart 🛒
