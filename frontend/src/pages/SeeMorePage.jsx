@@ -170,11 +170,15 @@ const SeeMorePage = () => {
     setTimeout(() => setShowReviewSuccess(false), 3000);
   };
   const price = Number(product.price) || 0;
-const discount = Number(product.discount) || 0;
+  const discountValue = product.discount
+    ? typeof product.discount === 'string'
+      ? parseFloat(product.discount) || 0
+      : Number(product.discount) || 0
+    : 0;
 
-const hasDiscount = discount > 0;
+  const hasDiscount = discountValue > 0;
 
-const discountedPrice = price - (price * discount) / 100;
+  const discountedPrice = hasDiscount ? (price - (price * discountValue) / 100).toFixed(2) : price.toFixed(2);
 
  return (
   <main className="see-more-page">
@@ -183,7 +187,7 @@ const discountedPrice = price - (price * discount) / 100;
         <p className="see-more-kicker">See more</p>
         <h1>{product.name}</h1>
 
-        {product.discount ? (
+        {hasDiscount ? (
           <div className="see-more-price">
             <p
               className="original-price"
@@ -193,7 +197,7 @@ const discountedPrice = price - (price * discount) / 100;
                 marginBottom: "5px",
               }}
             >
-              ₹{product.price}
+              ₹{price.toFixed(2)}
             </p>
 
             <p
@@ -205,11 +209,7 @@ const discountedPrice = price - (price * discount) / 100;
                 marginBottom: "5px",
               }}
             >
-              ₹
-              {(
-                product.price -
-                (product.price * product.discount) / 100
-              ).toFixed(0)}
+              ₹{discountedPrice}
             </p>
 
             <p
@@ -220,11 +220,11 @@ const discountedPrice = price - (price * discount) / 100;
                 fontSize: "16px",
               }}
             >
-              {product.discount}% OFF
+              {discountValue}% OFF
             </p>
           </div>
         ) : (
-          <p className="price">₹{product.price}</p>
+          <p className="price">₹{price.toFixed(2)}</p>
         )}
       </div>
     </div>
