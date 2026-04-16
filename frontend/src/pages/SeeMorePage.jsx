@@ -123,7 +123,7 @@ const SeeMorePage = () => {
       addToCart({
         id: product.id || product._id,
         name: product.name,
-        price: product.price,
+        price: hasDiscount ? parseFloat(discountedPrice) : price,
         selectedVariant: main,
         image: product.image,
         size: selectedSize,

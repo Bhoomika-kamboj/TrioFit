@@ -30,7 +30,7 @@ const Cart = () => {
               onClick={() => navigate(`/product/${item.id}`)}
             />
             <span>
-              {item.name} — ₹{item.price}{" "}
+              {item.name} — ₹{item.price} {item.quantity > 1 && `x${item.quantity}`}
               {item.selectedVariant && <span>(Selected variant)</span>}
             </span>
           </li>
