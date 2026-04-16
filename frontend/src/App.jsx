@@ -29,6 +29,10 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import SellerDashboard from "./pages/SellerDashboard";
+import FiftyPercentOff from "./pages/FiftyPercentOff";
+import SixtyPercentOff from "./pages/SixtyPercentOff";
+import ThirtyPercentOff from "./pages/ThirtyPercentOff";
+import TwentyPercentOff from "./pages/TwentyPercentOff";
 
 
 
@@ -57,6 +61,10 @@ function App() {
         <Route path="/Women" element={<Women />} />
         <Route path="/Men" element={<Men />} />
         <Route path="/Kids" element={<Kids />} />
+        <Route path="/fifty-percent-off" element={<FiftyPercentOff />} />
+        <Route path="/sixty-percent-off" element={<SixtyPercentOff />} />
+        <Route path="/thirty-percent-off" element={<ThirtyPercentOff />} />
+        <Route path="/twenty-percent-off" element={<TwentyPercentOff />} />
       <Route path="/see-more/:id" element={<SeeMorePage />} />
       <Route path="/checkout" element={<Checkout />} />
       <Route path="/cart" element={<Cart />} />

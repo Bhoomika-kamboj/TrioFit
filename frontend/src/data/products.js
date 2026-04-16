@@ -1,17 +1,13 @@
 // central product data using import.meta URLs for assets
 const discountedProductIds = new Set([1, 5, 12, 15, 22, 26]);
 
-const applyDiscount = (products) =>
-  products.map((product) =>
-    discountedProductIds.has(product.id)
-      ? {
-          ...product,
-          isDiscounted: true,
-          discountedPrice: Number((product.price * 0.8).toFixed(2)),
-          discount: "20% OFF",
-        }
-      : product
-  );
+const applyDiscount = (products, discountPercent) =>
+  products.map((product) => ({
+    ...product,
+    isDiscounted: true,
+    discountedPrice: Number((product.price * (1 - discountPercent / 100)).toFixed(2)),
+    discount: `${discountPercent}% OFF`,
+  }));
 
 const topProductsData = [
     {
@@ -348,7 +344,7 @@ const ethnicProductsData = [
 
 export const ethnicProducts = applyDiscount(ethnicProductsData);
 
-export const kidEthnicProducts = [
+const kidEthnicProductsData = [
     {
         id: 31,
         name: "Cutiekins boys'printed kurta ",
@@ -463,7 +459,8 @@ export const kidEthnicProducts = [
         ],
     },
 ];
-export const kidJeansProducts = [
+export const kidEthnicProducts = applyDiscount(kidEthnicProductsData, 30);
+const kidJeansProductsData = [
     {
         id: 41,
         name: "Boys Relaxed Fit Woven Cargo Trousers",
@@ -519,7 +516,8 @@ export const kidJeansProducts = [
         ],
     },
 ];
-export const kidShirtsProducts = [
+export const kidJeansProducts = applyDiscount(kidJeansProductsData, 30);
+const kidShirtsProductsData = [
 {
     id: 46,
     name: "Kids black and white cotton chequered casual shirt",
@@ -630,7 +628,8 @@ export const kidShirtsProducts = [
 },
 ];
 
-export const kidTShirtsProducts = [
+export const kidShirtsProducts = applyDiscount(kidShirtsProductsData, 30);
+const kidTShirtsProductsData = [
 {
     id: 56,
     name: "Vigilante brand t-shirt is a boys",
@@ -737,7 +736,8 @@ export const kidTShirtsProducts = [
     ],
 },
 ];
-export const kidGirlsBottomProducts = [
+export const kidTShirtsProducts = applyDiscount(kidTShirtsProductsData, 30);
+const kidGirlsBottomProductsData = [
   {
     id: 66,
     name: "light blue denim bell-bottom jeans ",
@@ -854,7 +854,8 @@ export const kidGirlsBottomProducts = [
     ],
   },
 ];
-export const kidGirlsDressProducts = [
+export const kidGirlsBottomProducts = applyDiscount(kidGirlsBottomProductsData, 50);
+const kidGirlsDressProductsData = [
   {
     id: 77,
     name: "Cutiepie Elegant Girls Frocks Dresses",
@@ -929,7 +930,8 @@ export const kidGirlsDressProducts = [
     ],
   },
 ];
-export const kidGirlsEthnicProducts = [
+export const kidGirlsDressProducts = applyDiscount(kidGirlsDressProductsData, 50);
+const kidGirlsEthnicProductsData = [
   {
     id: 84,
     name: "festive and party kurta and skirt set",
@@ -1013,7 +1015,8 @@ export const kidGirlsEthnicProducts = [
     ],
   },
 ];
-export const kidGirlsTopProducts = [
+export const kidGirlsEthnicProducts = applyDiscount(kidGirlsEthnicProductsData, 50);
+const kidGirlsTopProductsData = [
   {
     id: 92,
     name: "short-sleeve crop top",
@@ -1086,7 +1089,8 @@ export const kidGirlsTopProducts = [
     ],
   },
 ];
-export const menBottomProducts = [
+export const kidGirlsTopProducts = applyDiscount(kidGirlsTopProductsData, 50);
+const menBottomProductsData = [
   {
     id: 99,
     name: " Loose Fit Men Silver Trousers",
@@ -1198,7 +1202,8 @@ export const menBottomProducts = [
     ],
   },
 ];
-export const menEthnicProducts = [
+export const menBottomProducts = applyDiscount(menBottomProductsData, 60);
+const menEthnicProductsData = [
   {
     id: 109,
     name: "Men's white printed cotton blend kurta ",
@@ -1310,7 +1315,8 @@ export const menEthnicProducts = [
     ],
   },
 ];
-export const menTopProducts = [
+export const menEthnicProducts = applyDiscount(menEthnicProductsData, 60);
+const menTopProductsData = [
   {
     id: 119,
     name: "Slim Fit Polo Shirt",
@@ -1422,4 +1428,5 @@ export const menTopProducts = [
     ],
   },
 ];
+export const menTopProducts = applyDiscount(menTopProductsData, 60);
 
