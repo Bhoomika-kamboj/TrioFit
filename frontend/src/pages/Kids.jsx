@@ -11,6 +11,13 @@ import {
   kidGirlsEthnicProducts,
   kidGirlsTopProducts
 } from '../data/products'
+import kidsBannerBoysBottom from '../assets/images/banner/kidsbottomwearboys.png'
+import kidsBannerGirlsBottom from '../assets/images/banner/kidsbottomweargirl.png'
+import kidsBannerGirlsDress from '../assets/images/banner/kidsdressesgirls.png'
+import kidsBannerBoysEthnic from '../assets/images/banner/kidsethenicwearboys.png'
+import kidsBannerBoysShirt from '../assets/images/banner/kidsshirtboys.png'
+import kidsBannerBoysTop from '../assets/images/banner/kidstopwearboys.png'
+import kidsBannerGirlsTop from '../assets/images/banner/kidstopweargirls.png'
 
 const Kids = () => {
   const [extraProducts, setExtraProducts] = useState({
@@ -18,8 +25,19 @@ const Kids = () => {
     girls: [],
   });
 
+  const images = [kidsBannerBoysBottom, kidsBannerGirlsBottom, kidsBannerGirlsDress, kidsBannerBoysEthnic, kidsBannerBoysShirt, kidsBannerBoysTop, kidsBannerGirlsTop];
+  const linkTargets = ["#boys-section", "#girls-section", "#girls-section", "#boys-section", "#boys-section", "#boys-section", "#girls-section"];
+  const [current, setCurrent] = useState(0);
+
   useEffect(() => {
     fetchSellerProducts();
+  }, []);
+
+  useEffect(() => {
+    const slide = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(slide);
   }, []);
 
   const fetchSellerProducts = async () => {
@@ -36,30 +54,41 @@ const Kids = () => {
     }
   };
 
+  const nextSlide = () => setCurrent((current + 1) % images.length);
+  const prevSlide = () => setCurrent((current - 1 + images.length) % images.length);
+
   return (
     <main className="catalog-page">
-    <section className="catalog-hero">
-      <div className="catalog-hero-card">
-        <h1 className='Title'>Kids</h1>
-        <p>Playful browsing with cleaner spacing, faster image preview, and easier mobile taps.</p>
-      </div>
-      <div className="catalog-hero-panel">
-        <div className="catalog-stat">
-          <strong>Boys</strong>
-          <p>Ethnicwear, jeans, shirts, and tees grouped into easier sections.</p>
-        </div>
-        <div className="catalog-stat">
-          <strong>Girls</strong>
-          <p>Bottoms, dresses, tops, and festive looks with the same see-more flow.</p>
-        </div>
-        <div className="catalog-stat">
-          <strong>Responsive</strong>
-          <p>Cards stack better on smaller screens without losing image focus.</p>
-        </div>
-      </div>
-    </section>
+      <div className="women-banner-slider">
+        <a href={linkTargets[current]}>
+          <img
+            src={images[current]}
+            alt="kids-category"
+            className="slider-image"
+          />
+        </a>
 
-      <section className="catalog-section">
+        <button className="arrow left" onClick={prevSlide}>
+          &#10094;
+        </button>
+        <button className="arrow right" onClick={nextSlide}>
+          &#10095;
+        </button>
+
+        <div className="dots">
+          {images.map((_, i) => (
+            <span
+              key={i}
+              className={i === current ? "dot active" : "dot"}
+              onClick={() => setCurrent(i)}
+            ></span>
+          ))}
+        </div>
+      </div>
+
+    
+
+      <section className="catalog-section" id="boys-section">
       <h3 className='mini-title'>Kids Ethnicwear</h3>
       <div className="products">
         {kidEthnicProducts.map((p) => (
@@ -95,7 +124,7 @@ const Kids = () => {
       </div>
       </section>
 
-      <section className="catalog-section">
+      <section className="catalog-section" id="girls-section">
       <h3 className='mini-title'>Girls Bottoms</h3>
       <div className="products">
         {kidGirlsBottomProducts.map((p) => (

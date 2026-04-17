@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react'
 import axios from "axios";
 import ProductCard from "../components/ProductCard";
 import { topProducts, bottomProducts, ethnicProducts } from "../data/products";
+import womenBannerTopwear from "../assets/images/banner/womentopwear.png";
+import womenBannerBottomwear from "../assets/images/banner/womenbottomwear.png";
+import womenBannerEthnic from "../assets/images/banner/womenethenicwear.png";
 
 const Women = () => {
   const [extraProducts, setExtraProducts] = useState({
@@ -10,8 +13,19 @@ const Women = () => {
     ethnic: [],
   });
 
+  const images = [womenBannerTopwear, womenBannerBottomwear, womenBannerEthnic];
+  const linkTargets = ["#topwear-section", "#bottomwear-section", "#ethnic-section"];
+  const [current, setCurrent] = useState(0);
+
   useEffect(() => {
     fetchSellerProducts();
+  }, []);
+
+  useEffect(() => {
+    const slide = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(slide);
   }, []);
 
   const fetchSellerProducts = async () => {
@@ -29,30 +43,41 @@ const Women = () => {
     }
   };
 
+  const nextSlide = () => setCurrent((current + 1) % images.length);
+  const prevSlide = () => setCurrent((current - 1 + images.length) % images.length);
+
   return (
     <main className="catalog-page">
-      <section className="catalog-hero">
-        <div className="catalog-hero-card">
-          <h1 className='Title'>Women</h1>
-          <p>Fresh fits, cleaner cards, and a more responsive layout for every screen size.</p>
-        </div>
-        <div className="catalog-hero-panel">
-          <div className="catalog-stat">
-            <strong>Topwear</strong>
-            <p>Polished shirts, tees, and statement silhouettes.</p>
-          </div>
-          <div className="catalog-stat">
-            <strong>Bottomwear</strong>
-            <p>Everyday denim, tailored fits, and easy movement.</p>
-          </div>
-          <div className="catalog-stat">
-            <strong>Ethnic wear</strong>
-            <p>Festive looks with faster browsing into See More.</p>
-          </div>
-        </div>
-      </section>
+      <div className="women-banner-slider">
+        <a href={linkTargets[current]}>
+          <img
+            src={images[current]}
+            alt="women-category"
+            className="slider-image"
+          />
+        </a>
 
-      <section className="catalog-section">
+        <button className="arrow left" onClick={prevSlide}>
+          &#10094;
+        </button>
+        <button className="arrow right" onClick={nextSlide}>
+          &#10095;
+        </button>
+
+        <div className="dots">
+          {images.map((_, i) => (
+            <span
+              key={i}
+              className={i === current ? "dot active" : "dot"}
+              onClick={() => setCurrent(i)}
+            ></span>
+          ))}
+        </div>
+      </div>
+
+     
+
+      <section className="catalog-section" id="topwear-section">
       <h3 className='mini-title'>TopWear</h3>
       <div className="products">
         {topProducts.map((p) => (
@@ -64,7 +89,7 @@ const Women = () => {
       </div>
       </section>
 
-      <section className="catalog-section">
+      <section className="catalog-section" id="bottomwear-section">
       <h3 className='mini-title'>BottomWear</h3>
       <div className="products">
         {bottomProducts.map((p) => (
@@ -76,7 +101,7 @@ const Women = () => {
       </div>
       </section>
 
-      <section className="catalog-section">
+      <section className="catalog-section" id="ethnic-section">
       <h3 className='mini-title'>Ethnicwear</h3>
       <div className="products">
         {ethnicProducts.map((p) => (

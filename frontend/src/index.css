@@ -57,6 +57,7 @@ body {
   --header-bg: rgba(87, 166, 244, 0.65); /* Pale blue tint with transparency */
   --header-border: rgba(255, 255, 255, 0.6);
   --header-shadow: rgba(0, 120, 255, 0.08); /* Tiny hint of blue in the shadow */
+  --header-hover-shadow: rgba(0, 120, 255, 0.15); /* Slightly stronger shadow on hover */
   --text-color: #1a2b3c;      
  --header-hover-bg: rgba(245, 250, 255, 0.85);  /*            /* Deep navy text for contrast */
  --bg-main: #ffffff;
@@ -98,6 +99,7 @@ body {
  --header-bg: rgba(15, 20, 30, 0.75);    /* Dark slate/navy tint */
   --header-border: rgba(255, 255, 255, 0.05);
   --header-shadow: rgba(0, 0, 0, 0.5);
+  --header-hover-shadow: rgba(0, 0, 0, 0.7); /* Stronger shadow on hover for dark mode */
   --text-color: #e0e6ed;
   --header-hover-bg: rgba(25, 30, 45, 0.85);
   --bg-main: #121212;
@@ -3178,7 +3180,88 @@ body {
 }
 
 .catalog-page {
-  padding: 8.5rem 0 4rem;
+  padding: 3rem 0 4rem;
+}
+
+/* Women Banner Slider Styles */
+.women-banner-slider {
+  width: 95%;
+  max-width: 1400px;
+  height: 70vh;
+  margin: 90px auto 2rem auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.women-banner-slider a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  font-size: 1.5rem;
+  border: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.arrow.left {
+  left: 20px;
+}
+
+.arrow.right {
+  right: 20px;
+}
+
+.arrow:hover {
+  background-color: #ffffff;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dots {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: #fff;
 }
 
 .catalog-hero {
@@ -3722,6 +3805,36 @@ body {
   .premium-gallery-stage {
     min-height: 320px;
   }
+
+  /* Women Banner Slider Mobile Styles */
+  .women-banner-slider {
+    height: 50vh;
+    margin: 75px auto 1.5rem auto;
+  }
+
+  .arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .arrow.left {
+    left: 10px;
+  }
+
+  .arrow.right {
+    right: 10px;
+  }
+
+  .dots {
+    bottom: 15px;
+    gap: 8px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
 }
 /* =========================================
    CARD - FULLY CONSISTENT ENHANCED STYLE
@@ -3970,4 +4083,754 @@ body {
   cursor: pointer;
   background: var(--primary);
   color: white;
+}
+
+/* =========================================
+   COMPREHENSIVE RESPONSIVE DESIGN
+   Added below existing styles - April 17, 2026
+========================================= */
+
+/* =========================================
+   BANNER/OFFER BANNER RESPONSIVE
+========================================= */
+
+/* Offer Banner Slider - Enhanced Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .offer-slider {
+    width: 98%;
+    height: 60vh;
+    margin: 80px auto 1.5rem auto;
+    border-radius: 15px;
+  }
+
+  .women-banner-slider {
+    width: 98%;
+    height: 60vh;
+    margin: 70px auto 1.5rem auto;
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .offer-slider {
+    width: 100%;
+    height: 45vh;
+    margin: 70px auto 1rem auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  .women-banner-slider {
+    width: 100%;
+    height: 45vh;
+    margin: 60px auto 1rem auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  .slider-image {
+    object-fit: cover;
+  }
+
+  .arrow {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .arrow.left {
+    left: 15px;
+  }
+
+  .arrow.right {
+    right: 15px;
+  }
+
+  .dots {
+    bottom: 12px;
+    gap: 10px;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .offer-slider {
+    width: 100%;
+    height: 35vh;
+    margin: 60px 0 0.8rem 0;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  }
+
+  .women-banner-slider {
+    width: 100%;
+    height: 35vh;
+    margin: 50px 0 0.8rem 0;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  }
+
+  .arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+
+  .arrow.left {
+    left: 8px;
+  }
+
+  .arrow.right {
+    right: 8px;
+  }
+
+  .dots {
+    bottom: 8px;
+    gap: 8px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .offer-slider {
+    height: 30vh;
+    margin: 50px 0 0.5rem 0;
+  }
+
+  .women-banner-slider {
+    height: 30vh;
+    margin: 40px 0 0.5rem 0;
+  }
+
+  .arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .dots {
+    bottom: 6px;
+  }
+}
+
+/* =========================================
+   H1 HEADINGS RESPONSIVE
+========================================= */
+
+/* General H1 Styles for Mobile */
+@media (max-width: 768px) {
+  .Title {
+    font-size: 2.2rem !important;
+    margin: 40px auto !important;
+    padding-bottom: 10px !important;
+  }
+
+  .Title::after {
+    height: 2px !important;
+    left: 20% !important;
+    right: 20% !important;
+  }
+
+  .container h1 {
+    font-size: 1.6rem !important;
+    margin-bottom: 0.8rem !important;
+  }
+
+  .support-wrapper h1 {
+    font-size: 1.7rem !important;
+  }
+
+  .policy-container h1,
+  .terms-container h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .premium-header h2 {
+    font-size: 2.2rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.3px !important;
+    margin-bottom: 0.8rem !important;
+  }
+
+  .Title {
+    font-size: 1.8rem !important;
+    margin: 30px auto !important;
+    padding-bottom: 8px !important;
+  }
+
+  .Title::after {
+    height: 1.5px !important;
+    left: 15% !important;
+    right: 15% !important;
+  }
+
+  .container h1 {
+    font-size: 1.4rem !important;
+    margin-bottom: 0.6rem !important;
+  }
+
+  .support-wrapper h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .policy-container h1,
+  .terms-container h1 {
+    font-size: 1.3rem !important;
+  }
+
+  .premium-header h2 {
+    font-size: 1.8rem !important;
+  }
+
+  .premium-header p {
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 360px) {
+  h1 {
+    font-size: 1.3rem !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.2px !important;
+    margin-bottom: 0.6rem !important;
+  }
+
+  .Title {
+    font-size: 1.5rem !important;
+    margin: 20px auto !important;
+    padding-bottom: 6px !important;
+  }
+
+  .container h1 {
+    font-size: 1.2rem !important;
+  }
+
+  .premium-header h2 {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* =========================================
+   HEADER RESPONSIVE ENHANCEMENTS
+========================================= */
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 1rem !important;
+    min-height: 45px !important;
+    height: 50px !important;
+  }
+
+  .logo h2 {
+    font-size: 1.6rem !important;
+    letter-spacing: -0.3px !important;
+  }
+
+  .header nav a {
+    font-size: 1.1rem !important;
+    padding: 0.8rem 1rem !important;
+  }
+
+  .hamburger {
+    width: 22px !important;
+    height: 18px !important;
+  }
+
+  .hamburger span {
+    height: 2.5px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0 0.8rem !important;
+    min-height: 42px !important;
+    height: 46px !important;
+  }
+
+  .logo h2 {
+    font-size: 1.4rem !important;
+    letter-spacing: -0.2px !important;
+  }
+
+  .header nav a {
+    font-size: 1rem !important;
+    padding: 0.7rem 0.8rem !important;
+  }
+
+  .hamburger {
+    width: 20px !important;
+    height: 16px !important;
+  }
+
+  .hamburger span {
+    height: 2px !important;
+  }
+}
+
+/* =========================================
+   POPULAR SLIDER RESPONSIVE ENHANCEMENTS
+========================================= */
+
+@media (max-width: 768px) {
+  .popular-slider-section {
+    margin: 1.5rem auto !important;
+    padding: 1rem 0.5rem !important;
+    max-width: 95% !important;
+  }
+
+  .popular-slider-section h2 {
+    font-size: 1.4rem !important;
+    margin-left: 0.5rem !important;
+    margin-bottom: 0.8rem !important;
+  }
+
+  .slider-container {
+    padding: 0.5rem !important;
+  }
+
+  .slider {
+    gap: 12px !important;
+    padding: 0.8rem 0.3rem !important;
+  }
+
+  .slider-item {
+    min-width: 160px !important;
+    padding: 0.7rem !important;
+  }
+
+  .slider-item img {
+    height: 160px !important;
+  }
+
+  .slider-item h4 {
+    font-size: 0.9rem !important;
+  }
+
+  .slider-item p {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .popular-slider-section {
+    margin: 1rem auto !important;
+    padding: 0.8rem 0.3rem !important;
+    max-width: 98% !important;
+  }
+
+  .popular-slider-section h2 {
+    font-size: 1.2rem !important;
+    margin-left: 0.3rem !important;
+    margin-bottom: 0.6rem !important;
+  }
+
+  .slider {
+    gap: 10px !important;
+    padding: 0.6rem 0.2rem !important;
+  }
+
+  .slider-item {
+    min-width: 140px !important;
+    padding: 0.6rem !important;
+  }
+
+  .slider-item img {
+    height: 140px !important;
+  }
+
+  .slider-item h4 {
+    font-size: 0.85rem !important;
+  }
+
+  .slider-item p {
+    font-size: 0.95rem !important;
+  }
+}
+
+/* =========================================
+   PRODUCT CARDS RESPONSIVE ENHANCEMENTS
+========================================= */
+
+@media (max-width: 768px) {
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
+    gap: 1rem !important;
+  }
+
+  .product-card {
+    padding: 16px !important;
+  }
+
+  .product-card img {
+    height: 200px !important;
+  }
+
+  .product-card h3 {
+    font-size: 0.95rem !important;
+  }
+
+  .product-card p {
+    font-size: 1rem !important;
+  }
+
+  .product-card button {
+    padding: 0.5rem 0.8rem !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)) !important;
+    gap: 0.8rem !important;
+  }
+
+  .product-card {
+    padding: 14px !important;
+  }
+
+  .product-card img {
+    height: 180px !important;
+  }
+
+  .product-card h3 {
+    font-size: 0.9rem !important;
+  }
+
+  .product-card p {
+    font-size: 0.95rem !important;
+  }
+
+  .product-card button {
+    padding: 0.5rem 0.7rem !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+/* =========================================
+   CATEGORY CARDS RESPONSIVE ENHANCEMENTS
+========================================= */
+
+@media (max-width: 768px) {
+  .category-container {
+    gap: 1.5rem !important;
+    margin: 1.5rem 0 !important;
+  }
+
+  .category-card {
+    flex: 1 1 200px !important;
+    min-width: 200px !important;
+    max-width: 280px !important;
+    padding: 0.8rem !important;
+  }
+
+  .category-card img {
+    height: 50vh !important;
+  }
+
+  .category-card h3 {
+    font-size: 1.1rem !important;
+    margin: 0.4rem 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-container {
+    gap: 1rem !important;
+    margin: 1rem 0 !important;
+  }
+
+  .category-card {
+    flex: 1 1 160px !important;
+    min-width: 160px !important;
+    max-width: 200px !important;
+    padding: 0.6rem !important;
+  }
+
+  .category-card img {
+    height: 35vh !important;
+  }
+
+  .category-card h3 {
+    font-size: 1rem !important;
+    margin: 0.3rem 0 !important;
+  }
+}
+
+/* =========================================
+   FOOTER RESPONSIVE ENHANCEMENTS
+========================================= */
+
+@media (max-width: 768px) {
+  .triofit-footer {
+    padding: 2.5rem 1rem 1rem !important;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)) !important;
+    gap: 1.8rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .footer-column h3 {
+    font-size: 1rem !important;
+    margin-bottom: 0.9rem !important;
+  }
+
+  .footer-column ul li a {
+    font-size: 0.85rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .triofit-footer {
+    padding: 2rem 0.8rem 0.8rem !important;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    margin-bottom: 0.8rem !important;
+  }
+
+  .footer-column {
+    text-align: center !important;
+  }
+
+  .footer-column h3 {
+    font-size: 0.95rem !important;
+    margin-bottom: 0.7rem !important;
+  }
+
+  .footer-column h3::after {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .footer-column ul {
+    align-items: center !important;
+    gap: 0.4rem !important;
+  }
+
+  .footer-column ul li a {
+    font-size: 0.8rem !important;
+    justify-content: center !important;
+    display: flex !important;
+  }
+
+  .footer-bottom p {
+    font-size: 0.75rem !important;
+  }
+}
+
+/* =========================================
+   CART PAGE RESPONSIVE ENHANCEMENTS
+========================================= */
+
+@media (max-width: 768px) {
+  .cart-page {
+    padding: 80px 15px 40px !important;
+    margin-top: 100px !important;
+    margin-bottom: 80px !important;
+  }
+
+  .cart-title {
+    font-size: 1.8rem !important;
+    margin-bottom: 20px !important;
+  }
+
+  .cart-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    gap: 15px !important;
+  }
+
+  .cart-card {
+    padding: 12px !important;
+    gap: 12px !important;
+  }
+
+  .cart-img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  .cart-details h3 {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-page {
+    padding: 70px 10px 30px !important;
+    margin-top: 90px !important;
+    margin-bottom: 60px !important;
+  }
+
+  .cart-title {
+    font-size: 1.5rem !important;
+    margin-bottom: 15px !important;
+  }
+
+  .cart-container {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .cart-card {
+    padding: 10px !important;
+    gap: 10px !important;
+  }
+
+  .cart-img {
+    width: 70px !important;
+    height: 70px !important;
+  }
+
+  .cart-details h3 {
+    font-size: 0.95rem !important;
+  }
+
+  .price {
+    font-size: 0.9rem !important;
+  }
+}
+
+/* =========================================
+   GENERAL MOBILE OPTIMIZATIONS
+========================================= */
+
+/* Improve touch targets on mobile */
+@media (max-width: 768px) {
+  button,
+  .product-card button,
+  .see-more-btn,
+  .add-btn,
+  .view-btn,
+  .apply-btn {
+    min-height: 44px !important;
+    padding: 0.6rem 1rem !important;
+  }
+
+  /* Better spacing for mobile navigation */
+  .home {
+    padding: 0.5rem 0 3rem !important;
+  }
+
+  /* Optimize text readability */
+  body {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Better image loading on mobile */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+  .home {
+    padding: 0.3rem 0 2rem !important;
+  }
+
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)) !important;
+    gap: 0.6rem !important;
+  }
+
+  .product-card {
+    padding: 12px !important;
+  }
+
+  .product-card img {
+    height: 160px !important;
+  }
+
+  .category-card {
+    flex: 1 1 140px !important;
+    min-width: 140px !important;
+    max-width: 180px !important;
+    padding: 0.5rem !important;
+  }
+
+  .category-card img {
+    height: 30vh !important;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY IMPROVEMENTS FOR MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  /* Ensure sufficient color contrast */
+  .product-card h3,
+  .category-card h3,
+  .cart-details h3 {
+    color: var(--text-main) !important;
+  }
+
+  /* Better focus indicators */
+  button:focus,
+  a:focus,
+  input:focus,
+  select:focus {
+    outline: 2px solid var(--primary) !important;
+    outline-offset: 2px !important;
+  }
+
+  /* Prevent horizontal scroll */
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* =========================================
+   PERFORMANCE OPTIMIZATIONS FOR MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  /* Reduce motion for better performance on low-end devices */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.2s !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.2s !important;
+    transition-delay: 0s !important;
+  }
+
+  /* Disable expensive effects on mobile */
+  .product-card:hover,
+  .category-card:hover,
+  .slider-item:hover {
+    transform: none !important;
+  }
+
+  /* Simplify shadows for better performance */
+  .product-card,
+  .category-card,
+  .cart-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  }
 }

@@ -67,8 +67,6 @@ const Header = () => {
 
       {/* Main Navigation */}
       <nav className={isOpen ? 'nav-open' : ''}>
-        <input type="text" placeholder="Search item here..." />
-
         <Link to="/" onClick={closeMenu}>
           <FiHome size={24} /> Home
         </Link>
