@@ -29,11 +29,13 @@ const Offer = () => {
   return (
     <div className="offer-slider">
 
-      <img
-        src={images[current]}
-        alt="offer"
-        className="slider-image"
-      />
+      <a href={linkTargets[current]}>
+        <img
+          src={images[current]}
+          alt="offer"
+          className="slider-image"
+        />
+      </a>
 
       {/* Arrows */}
       <button className="arrow left" onClick={prevSlide}>

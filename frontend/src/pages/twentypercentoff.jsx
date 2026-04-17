@@ -1,3 +1,4 @@
+
 import React from 'react'
 import ProductCard from '../components/ProductCard';
 import { topProducts, bottomProducts, ethnicProducts } from '../data/products';
@@ -10,7 +11,7 @@ const twentypercentoff = () => {
   ].filter((product) => product.isDiscounted);
 
   return (
-    <section className="catalog-section">
+    <section id="twentypercentoff" className="catalog-section">
       <h3 className='mini-title'>🎉 Special Discount Offers - 20% OFF</h3>
       <div className="products">
         {discountedProducts.length > 0 ? (

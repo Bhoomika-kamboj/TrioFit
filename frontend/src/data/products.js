@@ -390,7 +390,7 @@ const ethnicProductsData = [
 
 export const ethnicProducts = applyDiscount(ethnicProductsData);
 
-export const kidEthnicProducts = [
+const kidEthnicProductsData = [
     {
         id: 31,
         name: "Cutiekins boys'printed kurta ",
@@ -506,7 +506,9 @@ export const kidEthnicProducts = [
         ],
     },
 ];
-export const kidJeansProducts = [
+export const kidEthnicProducts = applyKidBoysDiscount(kidEthnicProductsData);
+const kidJeansProductsData = [
+
     {
         id: 41,
         name: "Boys Relaxed Fit Woven Cargo Trousers",
@@ -562,7 +564,9 @@ export const kidJeansProducts = [
         ],
     },
 ];
-export const kidShirtsProducts = [
+export const kidJeansProducts = applyKidBoysDiscount(kidJeansProductsData);
+const kidShirtsProductsData = [
+
 {
     id: 46,
     name: "Kids black and white cotton chequered casual shirt",
@@ -674,7 +678,7 @@ export const kidShirtsProducts = [
 ];
 export const kidShirtsProducts = applyKidBoysDiscount(kidShirtsProductsData);
 
-export const kidTShirtsProducts = [
+const kidTShirtsProductsData = [
 {
     id: 56,
     name: "Vigilante brand t-shirt is a boys",
@@ -781,7 +785,8 @@ export const kidTShirtsProducts = [
     ],
 },
 ];
-export const kidGirlsBottomProducts = [
+export const kidTShirtsProducts = applyKidBoysDiscount(kidTShirtsProductsData);
+const kidGirlsBottomProductsData = [
   {
     id: 66,
     name: "light blue denim bell-bottom jeans ",
@@ -898,7 +903,8 @@ export const kidGirlsBottomProducts = [
     ],
   },
 ];
-export const kidGirlsDressProducts = [
+export const kidGirlsBottomProducts = applyKidGirlsDiscount(kidGirlsBottomProductsData);
+const kidGirlsDressProductsData = [
   {
     id: 77,
     name: "Cutiepie Elegant Girls Frocks Dresses",
@@ -973,7 +979,8 @@ export const kidGirlsDressProducts = [
     ],
   },
 ];
-export const kidGirlsEthnicProducts = [
+export const kidGirlsDressProducts = applyKidGirlsDiscount(kidGirlsDressProductsData);
+const kidGirlsEthnicProductsData = [
   {
     id: 84,
     name: "festive and party kurta and skirt set",
@@ -1057,7 +1064,8 @@ export const kidGirlsEthnicProducts = [
     ],
   },
 ];
-export const kidGirlsTopProducts = [
+export const kidGirlsEthnicProducts = applyKidGirlsDiscount(kidGirlsEthnicProductsData);
+const kidGirlsTopProductsData = [
   {
     id: 92,
     name: "short-sleeve crop top",
@@ -1130,7 +1138,8 @@ export const kidGirlsTopProducts = [
     ],
   },
 ];
-export const menBottomProducts = [
+export const kidGirlsTopProducts = applyKidGirlsDiscount(kidGirlsTopProductsData);
+const menBottomProductsData = [
   {
     id: 99,
     name: " Loose Fit Men Silver Trousers",
@@ -1242,7 +1251,9 @@ export const menBottomProducts = [
     ],
   },
 ];
-export const menEthnicProducts = [
+export const menBottomProducts = applyMenDiscount(menBottomProductsData);
+
+const menEthnicProductsData = [
   {
     id: 109,
     name: "Men's white printed cotton blend kurta ",
@@ -1354,7 +1365,9 @@ export const menEthnicProducts = [
     ],
   },
 ];
-export const menTopProducts = [
+export const menEthnicProducts = applyMenDiscount(menEthnicProductsData);
+
+const menTopProductsData = [
   {
     id: 119,
     name: "Slim Fit Polo Shirt",
@@ -1466,4 +1479,4 @@ export const menTopProducts = [
     ],
   },
 ];
-
+export const menTopProducts = applyMenDiscount(menTopProductsData);
